@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'giftbox-studio'
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'prezio'
 const isGitHubPages = !!process.env.GITHUB_ACTIONS
 
 // https://vite.dev/config/

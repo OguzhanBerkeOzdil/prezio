@@ -6,8 +6,11 @@ import {
   Heart, DollarSign, Package, Palette, ShoppingBag, MessageSquare,
   Eye, CreditCard, ChevronLeft, ChevronRight, Search, Plus, Minus,
   Check, X, Pencil, PartyPopper, RotateCcw, Save, Sparkles, User,
-  Home,
+  Home, Cake, TreePine, Moon, GraduationCap, Baby, HeartHandshake,
+  Stethoscope, Gift, Flower2, CircleDot, AlignJustify, Hexagon,
+  Star, Square, Leaf, Ribbon, type LucideIcon,
 } from 'lucide-react'
+import { ItemIcon } from '@/components/common/item-icon'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -28,13 +31,13 @@ import { cn, formatPrice } from '@/lib/utils'
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
-const OCCASION_EMOJIS: Record<string, string> = {
-  birthday: '🎂', anniversary: '🎉', valentine: '💕', christmas: '🎄',
-  halloween: '🎃', graduation: '🎓', newBaby: '👶', thankYou: '🙏',
-  getWell: '💊', wedding: '💒', housewarming: '🏠', justBecause: '💝',
+const OCCASION_ICONS: Record<string, LucideIcon> = {
+  birthday: Cake, anniversary: PartyPopper, valentine: Heart, christmas: TreePine,
+  halloween: Moon, graduation: GraduationCap, newBaby: Baby, thankYou: HeartHandshake,
+  getWell: Stethoscope, wedding: Sparkles, housewarming: Home, justBecause: Gift,
 }
 
-const OCCASION_KEYS = Object.keys(OCCASION_EMOJIS)
+const OCCASION_KEYS = Object.keys(OCCASION_ICONS)
 
 const RELATIONSHIP_KEYS = ['partner', 'friend', 'parent', 'sibling', 'colleague', 'child', 'teacher', 'other']
 
@@ -127,7 +130,7 @@ function Confetti() {
           key={p.id}
           initial={{ y: -20, x: `${p.x}vw`, opacity: 1, rotate: 0, scale: 1 }}
           animate={{ y: '110vh', opacity: 0, rotate: p.rotation + 720, scale: 0.5 }}
-          transition={{ duration: p.duration, delay: p.delay, ease: 'easeIn' }}
+          transition={{ duration: p.duration, delay: p.delay, ease: 'easeIn' as const }}
           style={{
             position: 'absolute',
             width: p.size,
@@ -172,8 +175,8 @@ function OccasionStep() {
               onClick={() => setState({ occasion: key })}
             >
               <CardContent className="p-4 text-center space-y-2">
-                <span className="text-3xl block" role="img" aria-label={key}>
-                  {OCCASION_EMOJIS[key]}
+                <span className="flex justify-center text-primary" role="img" aria-label={key}>
+                  {(() => { const OccIcon = OCCASION_ICONS[key]; return <OccIcon className="h-8 w-8" /> })()}
                 </span>
                 <p className="text-sm font-medium leading-tight">
                   {t(`builder.steps.occasion.options.${key}`)}
@@ -310,7 +313,7 @@ function BudgetStep() {
           animate={{ scale: 1, opacity: 1 }}
           className="text-center"
         >
-          <span className="text-5xl font-bold font-serif text-primary">
+          <span className="text-4xl sm:text-5xl font-bold font-serif text-primary">
             {formatPrice(state.budget)}
           </span>
         </motion.div>
@@ -358,8 +361,8 @@ function PackagingStep() {
   const { t } = useTranslation()
   const { state, setState } = useBuilderStore()
 
-  const boxSizeEmojis: Record<string, string> = { S: '📦', M: '🎁', L: '🏗️' }
-  const styleEmojis: Record<string, string> = { classic: '🎀', luxury: '✨', eco: '🌿' }
+  const boxSizeIcons: Record<string, LucideIcon> = { S: Package, M: Gift, L: Home }
+  const styleIcons: Record<string, LucideIcon> = { classic: Ribbon, luxury: Sparkles, eco: Leaf }
 
   return (
     <div className="space-y-8">
@@ -387,7 +390,7 @@ function PackagingStep() {
                   onClick={() => setState({ boxSize: size })}
                 >
                   <CardContent className="p-5 text-center space-y-2">
-                    <span className="text-3xl block">{boxSizeEmojis[size]}</span>
+                    <span className="flex justify-center text-primary">{(() => { const BIcon = boxSizeIcons[size]; return <BIcon className="h-8 w-8" /> })()}</span>
                     <p className="font-semibold">{t(`builder.steps.packaging.sizes.${size}.label`)}</p>
                     <p className="text-xs text-muted-foreground">
                       {t(`builder.steps.packaging.sizes.${size}.description`)}
@@ -432,7 +435,7 @@ function PackagingStep() {
                   onClick={() => setState({ packagingStyle: style })}
                 >
                   <CardContent className="p-5 text-center space-y-2">
-                    <span className="text-3xl block">{styleEmojis[style]}</span>
+                    <span className="flex justify-center text-primary">{(() => { const SIcon = styleIcons[style]; return <SIcon className="h-8 w-8" /> })()}</span>
                     <p className="font-semibold">{t(`builder.steps.packaging.styles.${style}.label`)}</p>
                     <p className="text-xs text-muted-foreground">
                       {t(`builder.steps.packaging.styles.${style}.description`)}
@@ -524,8 +527,8 @@ function ThemeStep() {
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
           {PATTERN_KEYS.map((key) => {
             const selected = state.themePattern === key
-            const patternEmojis: Record<string, string> = {
-              none: '⬜', dots: '⚫', stripes: '📏', floral: '🌸', geometric: '🔷', stars: '⭐',
+            const patternIcons: Record<string, LucideIcon> = {
+              none: Square, dots: CircleDot, stripes: AlignJustify, floral: Flower2, geometric: Hexagon, stars: Star,
             }
             return (
               <Button
@@ -534,7 +537,7 @@ function ThemeStep() {
                 className="flex-col h-auto py-3 gap-1"
                 onClick={() => setState({ themePattern: key })}
               >
-                <span className="text-lg">{patternEmojis[key]}</span>
+                <span className="flex justify-center">{(() => { const PIcon = patternIcons[key]; return <PIcon className="h-5 w-5" /> })()}</span>
                 <span className="text-[11px]">{t(`builder.steps.theme.patterns.${key}`)}</span>
               </Button>
             )
@@ -548,10 +551,10 @@ function ThemeStep() {
           key={`${state.themePalette}-${state.themePattern}`}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-40 h-40 rounded-xl shadow-lg border-2 border-border flex items-center justify-center relative overflow-hidden"
+          className="w-32 h-32 sm:w-40 sm:h-40 rounded-xl shadow-lg border-2 border-border flex items-center justify-center relative overflow-hidden"
           style={{ backgroundColor: PALETTE_COLORS[state.themePalette] || '#f5f5f5' }}
         >
-          <span className="text-4xl z-10">🎁</span>
+          <Gift className="h-10 w-10 text-white/80 z-10" />
           {state.themePattern === 'dots' && (
             <div
               className="absolute inset-0 opacity-20"
@@ -570,8 +573,10 @@ function ThemeStep() {
             />
           )}
           {state.themePattern === 'stars' && (
-            <div className="absolute inset-0 flex items-center justify-center opacity-20 text-2xl">
-              ✦ ✦ ✦
+            <div className="absolute inset-0 flex items-center justify-center opacity-20">
+              <Star className="h-5 w-5 text-white" />
+              <Star className="h-5 w-5 text-white" />
+              <Star className="h-5 w-5 text-white" />
             </div>
           )}
         </motion.div>
@@ -637,6 +642,7 @@ function ItemsStep() {
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
           placeholder={t('builder.steps.items.search')}
+          aria-label={t('builder.steps.items.search')}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-9"
@@ -645,6 +651,7 @@ function ItemsStep() {
           <button
             onClick={() => setSearch('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+            aria-label={t('catalog.clearFilters', 'Clear search')}
           >
             <X className="h-4 w-4" />
           </button>
@@ -680,13 +687,13 @@ function ItemsStep() {
                 )}
               >
                 <CardContent className="p-4 flex items-center gap-3">
-                  <span className="text-3xl shrink-0">{item.emoji}</span>
+                  <ItemIcon name={item.icon} className="h-7 w-7 text-primary shrink-0" />
                   <div className="flex-1 min-w-0">
                     <p className="font-medium text-sm truncate">{item.name}</p>
                     <p className="text-xs text-muted-foreground truncate">{item.description}</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-sm font-semibold text-primary">{formatPrice(item.price)}</span>
-                      {item.popular && <Badge variant="accent" className="text-[10px] py-0">⭐</Badge>}
+                      {item.popular && <Badge variant="accent" className="text-[10px] py-0"><Sparkles className="h-3 w-3" /></Badge>}
                       {item.isNew && <Badge variant="success" className="text-[10px] py-0">NEW</Badge>}
                     </div>
                   </div>
@@ -697,6 +704,7 @@ function ItemsStep() {
                         variant="destructive"
                         className="h-8 w-8"
                         onClick={() => removeItem(item.id)}
+                        aria-label={t('builder.steps.items.remove', 'Remove') + ': ' + item.name}
                       >
                         <Minus className="h-4 w-4" />
                       </Button>
@@ -707,6 +715,7 @@ function ItemsStep() {
                         className="h-8 w-8"
                         disabled={boxFull}
                         onClick={() => addItem(item)}
+                        aria-label={t('builder.steps.items.add', 'Add') + ': ' + item.name}
                       >
                         <Plus className="h-4 w-4" />
                       </Button>
@@ -798,7 +807,7 @@ function CardStep() {
                 className="resize-none"
               />
               <p className="text-xs text-right text-muted-foreground">
-                {state.cardMessage.length}/300 {t('builder.steps.card.characters')}
+                {t('builder.steps.card.characters', { count: state.cardMessage.length, max: 300 })}
               </p>
             </div>
 
@@ -832,7 +841,7 @@ function PreviewStep() {
       step: 0,
       label: t('builder.steps.preview.occasion'),
       value: state.occasion
-        ? `${OCCASION_EMOJIS[state.occasion]} ${t(`builder.steps.occasion.options.${state.occasion}`)}`
+        ? t(`builder.steps.occasion.options.${state.occasion}`)
         : '—',
     },
     {
@@ -871,7 +880,7 @@ function PreviewStep() {
       label: t('builder.steps.preview.items'),
       value:
         state.selectedItems.length > 0
-          ? state.selectedItems.map((i) => `${i.emoji} ${i.name}`).join(', ')
+          ? state.selectedItems.map((i) => i.name).join(', ')
           : '—',
     },
     {
@@ -948,13 +957,13 @@ function CheckoutStep() {
           transition={{ type: 'spring', stiffness: 200, damping: 15 }}
           className="text-center space-y-6 py-12"
         >
-          <motion.span
-            className="text-7xl block"
+          <motion.div
+            className="flex justify-center"
             animate={{ rotate: [0, -10, 10, -10, 0], scale: [1, 1.2, 1] }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            🎉
-          </motion.span>
+            <PartyPopper className="h-16 w-16 text-primary" />
+          </motion.div>
           <h2 className="font-serif text-3xl font-bold">{t('builder.steps.checkout.orderPlaced')}</h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             {t('builder.steps.checkout.orderMessage')}
@@ -1112,7 +1121,7 @@ function CheckoutStep() {
           size="lg"
           disabled={!isFormValid}
           onClick={handlePlaceOrder}
-          className="min-w-50"
+          className="w-full sm:w-auto sm:min-w-50"
         >
           <PartyPopper className="mr-2 h-4 w-4" />
           {t('builder.steps.checkout.placeOrder')}

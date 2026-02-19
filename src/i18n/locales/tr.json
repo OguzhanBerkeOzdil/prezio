@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "GiftBox Studio",
+    "name": "Prezio",
     "tagline": "Her Özel An İçin Mükemmel Hediye Kutusu",
     "description": "Özenle seçilmiş ürünler, zarif ambalajlar ve içten mesajlarla kişiye özel hediye kutuları tasarlayın. Her anı unutulmaz kılın."
   },
@@ -29,7 +29,7 @@
     "trustedBy": "Dünya genelinde binlerce hediye sever tarafından tercih ediliyor"
   },
   "features": {
-    "sectionTitle": "Neden GiftBox Studio?",
+    "sectionTitle": "Neden Prezio?",
     "sectionSubtitle": "Unutulmaz hediyeler yaratmak için ihtiyacınız olan her şey",
     "curated": {
       "title": "Özenle Seçilmiş Koleksiyonlar",
@@ -85,7 +85,7 @@
       {
         "name": "Mehmet K.",
         "role": "Kurumsal Hediye",
-        "text": "Tüm müşteri takdir hediyelerimiz için GiftBox Studio kullanıyoruz. Kalite tutarlı ve özelleştirme seçenekleri inanılmaz.",
+        "text": "Tüm müşteri takdir hediyelerimiz için Prezio kullanıyoruz. Kalite tutarlı ve özelleştirme seçenekleri inanılmaz.",
         "rating": 5
       },
       {
@@ -163,7 +163,7 @@
     "company": "Şirket",
     "legal": "Yasal",
     "social": "Bizi Takip Edin",
-    "copyright": "© 2026 GiftBox Studio. Tüm hakları saklıdır.",
+    "copyright": "© 2026 Prezio. Tüm hakları saklıdır.",
     "madeWith": "Hediye severler için ❤️ ile yapıldı"
   },
   "catalog": {
@@ -173,6 +173,7 @@
     "allCategories": "Tüm Kategoriler",
     "noResults": "Ürün bulunamadı. Filtrelerinizi düzenlemeyi deneyin.",
     "addToBox": "Kutuya Ekle",
+    "added": "Eklendi",
     "viewDetails": "Detayları Gör",
     "recommended": "Önerilen",
     "popular": "Popüler",
@@ -182,7 +183,8 @@
     "priceRange": "Fiyat Aralığı",
     "category": "Kategori",
     "clearFilters": "Filtreleri Temizle",
-    "showing": "{{count}} ürün gösteriliyor",
+    "showing_one": "{{count}} ürün gösteriliyor",
+    "showing_other": "{{count}} ürün gösteriliyor",
     "sortOptions": {
       "featured": "Öne Çıkan",
       "priceLow": "Fiyat: Düşükten Yükseğe",
@@ -285,17 +287,17 @@
           "S": {
             "label": "Küçük",
             "description": "Birkaç özel ürün için mükemmel",
-            "items": "3 ürüne kadar"
+            "items": "{{count}} ürüne kadar"
           },
           "M": {
             "label": "Orta",
             "description": "En popüler boyutumuz",
-            "items": "6 ürüne kadar"
+            "items": "{{count}} ürüne kadar"
           },
           "L": {
             "label": "Büyük",
             "description": "Büyük jestler için",
-            "items": "10 ürüne kadar"
+            "items": "{{count}} ürüne kadar"
           }
         },
         "style": "Ambalaj Stili",
@@ -347,7 +349,8 @@
         "added": "Eklendi",
         "add": "Ekle",
         "remove": "Çıkar",
-        "itemsSelected": "{{count}} ürün seçildi",
+        "itemsSelected_one": "{{count}} ürün seçildi",
+        "itemsSelected_other": "{{count}} ürün seçildi",
         "maxItems": "Bu kutu boyutu için maksimum {{max}} ürün",
         "boxFull": "Kutunuz dolu! Daha fazla ürün için daha büyük bir boyuta geçin."
       },
@@ -404,7 +407,7 @@
         "placeOrder": "Sipariş Ver",
         "demoNotice": "Bu bir demodur. Gerçek bir ücretlendirme yapılmayacaktır.",
         "orderPlaced": "Sipariş Verildi!",
-        "orderMessage": "Hediye kutunuz oluşturuldu! Gerçek bir uygulamada bu işlenir ve gönderilirdi. GiftBox Studio'yu denediğiniz için teşekkürler!",
+        "orderMessage": "Hediye kutunuz oluşturuldu! Gerçek bir uygulamada bu işlenir ve gönderilirdi. Prezio'yu denediğiniz için teşekkürler!",
         "backToHome": "Ana Sayfaya Dön",
         "buildAnother": "Başka Bir Kutu Oluştur"
       }
@@ -433,7 +436,7 @@
       "Ücretsiz online oluşturucu",
       "Dijital kutu önizleme",
       "Sınırsız tasarım kaydetme",
-      "İki dil desteği (EN/TR)",
+      "Çok dilli destek (EN/TR/PL)",
       "Hesap gerekmez"
     ],
     "tiers": {
@@ -476,13 +479,13 @@
     }
   },
   "about": {
-    "title": "GiftBox Studio Hakkında",
+    "title": "Prezio Hakkında",
     "subtitle": "Her hediyenin bir hikaye anlatması gerektiğine inanıyoruz",
     "story": {
       "title": "Hikayemiz",
-      "p1": "GiftBox Studio basit bir fikirden doğdu: hediye vermek stresli değil, keyifli olmalı. İnsanların sıklıkla doğru hediyeyi bulmakta zorlandığını, saatlerce online arama yaptığını ve yine de seçimlerinin bir gülümseme getirip getirmeyeceğinden emin olamadığını fark ettik.",
+      "p1": "Prezio basit bir fikirden doğdu: hediye vermek stresli değil, keyifli olmalı. İnsanların sıklıkla doğru hediyeyi bulmakta zorlandığını, saatlerce online arama yaptığını ve yine de seçimlerinin bir gülümseme getirip getirmeyeceğinden emin olamadığını fark ettik.",
       "p2": "Bu yüzden özel günü seçmekten içten bir mesaj yazmaya kadar sizi süreç boyunca yönlendiren bir platform oluşturduk. Kataloğumuzdaki her ürün kalite ve düşüncelilik açısından özenle seçilmiştir.",
-      "p3": "İster bir doğum gününü kutluyor olun, ister teşekkür ediyor olun, ister sadece birine önemsediğinizi bildirmek istiyor olun, GiftBox Studio gerçekten özel bir şey yaratmayı kolaylaştırır."
+      "p3": "İster bir doğum gününü kutluyor olun, ister teşekkür ediyor olun, ister sadece birine önemsediğinizi bildirmek istiyor olun, Prezio gerçekten özel bir şey yaratmayı kolaylaştırır."
     },
     "mission": {
       "title": "Misyonumuz",
@@ -524,7 +527,7 @@
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular",
-    "subtitle": "GiftBox Studio hakkında bilmeniz gereken her şey",
+    "subtitle": "Prezio hakkında bilmeniz gereken her şey",
     "items": [
       {
         "question": "Hediye Kutusu Oluşturucu nasıl çalışır?",
@@ -532,7 +535,7 @@
       },
       {
         "question": "Bu gerçek bir e-ticaret platformu mu?",
-        "answer": "GiftBox Studio şu anda bir tasarım vitrini ve demodur. Oluşturucu kutu tasarlamak için tamamen işlevseldir, ancak gerçek ödeme veya gönderim yapılmaz. Bunu olası olanın bir önizlemesi olarak düşünün!"
+        "answer": "Prezio şu anda bir tasarım vitrini ve demodur. Oluşturucu kutu tasarlamak için tamamen işlevseldir, ancak gerçek ödeme veya gönderim yapılmaz. Bunu olası olanın bir önizlemesi olarak düşünün!"
       },
       {
         "question": "Tasarımlarımı kaydedebilir miyim?",
@@ -560,7 +563,7 @@
       },
       {
         "question": "Site başka dillerde mevcut mu?",
-        "answer": "Şu anda GiftBox Studio İngilizce ve Türkçe olarak mevcuttur. Dilleri istediğiniz zaman değiştirmek için üst kısımdaki dil değiştiriciyi kullanın."
+        "answer": "Prezio İngilizce, Türkçe ve Lehçe olarak kullanılabilir. Dili istediğiniz zaman üst kısımdaki dil seçicisini kullanarak değiştirebilirsiniz."
       },
       {
         "question": "Tasarımımı biriyle nasıl paylaşırım?",
@@ -588,10 +591,10 @@
       "error": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
     },
     "info": {
-      "email": "merhaba@giftboxstudio.com",
-      "phone": "+90 (212) 555 1234",
-      "address": "Hediye Sokak 123, Yaratıcı Mahalle, İstanbul",
-      "hours": "Pazartesi - Cuma, 09:00 - 18:00"
+      "email": "hello@prezio.app",
+      "phone": "",
+      "address": "Varşova, Polonya",
+      "hours": "Pazartesi – Cuma, 09:00 – 18:00 CET"
     },
     "validation": {
       "nameRequired": "Ad gereklidir",
@@ -637,12 +640,12 @@
     "privacy": {
       "title": "Gizlilik Politikası",
       "lastUpdated": "Son güncelleme: Şubat 2026",
-      "content": "GiftBox Studio bir demo uygulamadır. Bu gizlilik politikası bütünlük açısından sunulmuştur.\n\n**Topladığımız Bilgiler**\nBu demo uygulama yalnızca tercihlerinizi (tema, dil) ve kayıtlı hediye kutusu tasarımlarınızı tarayıcınızın yerel depolamasında saklar. Herhangi bir sunucuya kişisel veri gönderilmez.\n\n**Çerezler ve Yerel Depolama**\nTema tercihinizi, dil seçiminizi ve kayıtlı tasarımlarınızı saklamak için tarayıcı yerel depolamasını kullanıyoruz. İzleme çerezi kullanılmamaktadır.\n\n**Üçüncü Taraf Hizmetleri**\nBu site tipografi için Google Fonts kullanabilir. Analitik veya izleme hizmeti aktif değildir.\n\n**Veri Saklama**\nTüm veriler cihazınızda yerel olarak saklanır. Tarayıcı ayarlarınızdan istediğiniz zaman temizleyebilirsiniz.\n\n**İletişim**\nBu politika hakkında herhangi bir sorunuz için lütfen iletişim formumuzu kullanın."
+      "content": "Prezio bir demo uygulamadır. Bu gizlilik politikası bütünlük açısından sunulmuştur.\n\n**Topladığımız Bilgiler**\nBu demo uygulama yalnızca tercihlerinizi (tema, dil) ve kayıtlı hediye kutusu tasarımlarınızı tarayıcınızın yerel depolamasında saklar. Herhangi bir sunucuya kişisel veri gönderilmez.\n\n**Çerezler ve Yerel Depolama**\nTema tercihinizi, dil seçiminizi ve kayıtlı tasarımlarınızı saklamak için tarayıcı yerel depolamasını kullanıyoruz. İzleme çerezi kullanılmamaktadır.\n\n**Üçüncü Taraf Hizmetleri**\nBu site tipografi için Google Fonts kullanabilir. Analitik veya izleme hizmeti aktif değildir.\n\n**Veri Saklama**\nTüm veriler cihazınızda yerel olarak saklanır. Tarayıcı ayarlarınızdan istediğiniz zaman temizleyebilirsiniz.\n\n**İletişim**\nBu politika hakkında herhangi bir sorunuz için lütfen iletişim formumuzu kullanın."
     },
     "terms": {
       "title": "Kullanım Koşulları",
       "lastUpdated": "Son güncelleme: Şubat 2026",
-      "content": "GiftBox Studio bir demo ve portföy projesidir. Bu koşullar gösterim amaçlıdır.\n\n**Kabul**\nGiftBox Studio'ya erişerek bu koşulları kabul etmiş olursunuz.\n\n**Hizmet Açıklaması**\nGiftBox Studio, bir hediye kutusu oluşturma deneyiminin frontend demosudur. Gerçek ürün satılmaz, ödeme işlenmez ve teslimat yapılmaz.\n\n**Fikri Mülkiyet**\nBu sitenin tasarımı, kodu ve içeriği gösterim amaçlı oluşturulmuştur.\n\n**Sorumluluk Sınırlaması**\nBu ticari olmayan bir demodur. Hizmetle ilgili garanti veya taahhüt verilmemektedir.\n\n**Değişiklikler**\nBu koşullar herhangi bir zamanda bildirimde bulunulmaksızın güncellenebilir.\n\n**İletişim**\nSorularınız için lütfen iletişim formumuzu kullanın."
+      "content": "Prezio bir demo ve portföy projesidir. Bu koşullar gösterim amaçlıdır.\n\n**Kabul**\nPrezio'ya erişerek bu koşulları kabul etmiş olursunuz.\n\n**Hizmet Açıklaması**\nPrezio, bir hediye kutusu oluşturma deneyiminin frontend demosudur. Gerçek ürün satılmaz, ödeme işlenmez ve teslimat yapılmaz.\n\n**Fikri Mülkiyet**\nBu sitenin tasarımı, kodu ve içeriği gösterim amaçlı oluşturulmuştur.\n\n**Sorumluluk Sınırlaması**\nBu ticari olmayan bir demodur. Hizmetle ilgili garanti veya taahhüt verilmemektedir.\n\n**Değişiklikler**\nBu koşullar herhangi bir zamanda bildirimde bulunulmaksızın güncellenebilir.\n\n**İletişim**\nSorularınız için lütfen iletişim formumuzu kullanın."
     }
   },
   "notFound": {

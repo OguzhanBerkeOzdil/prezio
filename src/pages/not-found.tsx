@@ -5,7 +5,7 @@ import { PageTransition } from '@/components/common/page-transition'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { ROUTES } from '@/lib/constants'
-import { Home, Gift, PackageX } from 'lucide-react'
+import { Home, Gift, PackageX, Sparkles, Ribbon, Heart } from 'lucide-react'
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -17,34 +17,34 @@ export default function NotFoundPage() {
       <SEO title={t('notFound.title')} />
 
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden py-20">
-        {/* Floating emoji decorations */}
+        {/* Floating icon decorations */}
         <motion.div
           animate={{ y: [-10, 10, -10] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-16 left-[12%] text-4xl opacity-20 select-none"
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' as const }}
+          className="absolute top-16 left-[12%] opacity-20 select-none text-primary/40"
         >
-          🎁
+          <Gift className="h-10 w-10" />
         </motion.div>
         <motion.div
           animate={{ y: [10, -10, 10] }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-32 right-[14%] text-3xl opacity-20 select-none"
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' as const }}
+          className="absolute top-32 right-[14%] opacity-20 select-none text-primary/40"
         >
-          ✨
+          <Sparkles className="h-8 w-8" />
         </motion.div>
         <motion.div
           animate={{ y: [-8, 12, -8] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-24 left-[18%] text-3xl opacity-15 select-none"
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' as const }}
+          className="absolute bottom-24 left-[18%] opacity-15 select-none text-primary/40"
         >
-          🎀
+          <Ribbon className="h-8 w-8" />
         </motion.div>
         <motion.div
           animate={{ y: [12, -8, 12] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-36 right-[22%] text-2xl opacity-15 select-none"
+          transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' as const }}
+          className="absolute bottom-36 right-[22%] opacity-15 select-none text-primary/40"
         >
-          💝
+          <Heart className="h-7 w-7" />
         </motion.div>
 
         <div className="relative text-center px-4 sm:px-6">

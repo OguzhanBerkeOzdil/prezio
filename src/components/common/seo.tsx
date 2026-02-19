@@ -2,6 +2,8 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { SITE_NAME, SITE_URL } from '@/lib/constants'
 
+const SUPPORTED_LANGS = ['en', 'tr', 'pl'] as const
+
 interface SEOProps {
   title?: string
   description?: string
@@ -11,7 +13,7 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, path = '', image, type = 'website' }: SEOProps) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   
   const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — ${t('site.tagline')}`
   const pageDescription = description || t('site.description')
@@ -20,9 +22,21 @@ export function SEO({ title, description, path = '', image, type = 'website' }: 
 
   return (
     <Helmet>
+      <html lang={i18n.language} />
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <link rel="canonical" href={pageUrl} />
+
+      {/* hreflang alternates for each supported language */}
+      {SUPPORTED_LANGS.map((lang) => (
+        <link
+          key={lang}
+          rel="alternate"
+          hrefLang={lang}
+          href={`${pageUrl}${pageUrl.includes('?') ? '&' : '?'}lang=${lang}`}
+        />
+      ))}
+      <link rel="alternate" hrefLang="x-default" href={pageUrl} />
       
       {/* Open Graph */}
       <meta property="og:title" content={pageTitle} />
@@ -31,6 +45,8 @@ export function SEO({ title, description, path = '', image, type = 'website' }: 
       <meta property="og:image" content={pageImage} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content={i18n.language} />
+      <meta name="theme-color" content="#e11d48" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

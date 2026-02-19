@@ -36,7 +36,7 @@ const staggerItem = {
 function HeroSection() {
   const { t } = useTranslation()
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
       <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-secondary/5" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-primary)_0%,transparent_50%)] opacity-[0.07]" />
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -49,7 +49,7 @@ function HeroSection() {
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
             <Heart className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
             {t('about.title')}
           </h1>
           <p className="mt-2 max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
@@ -72,7 +72,7 @@ function StorySection() {
         >
           {t('about.story.title')}
         </motion.h2>
-        <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+        <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
           {(['about.story.p1', 'about.story.p2', 'about.story.p3'] as const).map((key, i) => (
             <motion.p
               key={key}
@@ -104,7 +104,7 @@ function MissionSection() {
               </div>
               <CardTitle className="text-2xl sm:text-3xl">{t('about.mission.title')}</CardTitle>
             </CardHeader>
-            <CardContent className="text-center pb-10 px-8 sm:px-16">
+            <CardContent className="text-center pb-10 px-4 sm:px-8 lg:px-16">
               <p className="text-lg leading-relaxed text-muted-foreground">
                 {t('about.mission.text')}
               </p>
@@ -172,7 +172,7 @@ function StatsSection() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...staggerContainer}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
         >
           {stats.map(({ key, label, icon: Icon }, i) => (
             <motion.div
@@ -218,7 +218,7 @@ function CTASection() {
         </p>
         <Button asChild variant="shimmer" size="lg" className="gap-2">
           <Link to={ROUTES.BUILDER}>
-            {t('home.hero.cta')}
+            {t('hero.cta')}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Button>

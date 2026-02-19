@@ -4,7 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search, Plus, Check, ArrowUpDown,
   X, ShoppingBag, Grid3X3, List, Sparkles, Filter,
+  Candy, Flame, Gem, Heart, Coffee, PenTool, Laptop, Home,
+  Gift, type LucideIcon,
 } from 'lucide-react'
+import { ItemIcon } from '@/components/common/item-icon'
 
 import { catalogItems, type CatalogItem } from '@/data/catalog-items'
 import { cn, formatPrice } from '@/lib/utils'
@@ -27,9 +30,9 @@ const CATEGORIES = [
   'drinks', 'stationery', 'tech', 'home',
 ] as const
 
-const CATEGORY_EMOJI: Record<string, string> = {
-  all: '✨', chocolates: '🍫', candles: '🕯️', accessories: '💍',
-  wellness: '🧘', drinks: '☕', stationery: '✏️', tech: '💻', home: '🏠',
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  all: Sparkles, chocolates: Candy, candles: Flame, accessories: Gem,
+  wellness: Heart, drinks: Coffee, stationery: PenTool, tech: Laptop, home: Home,
 }
 
 const SORT_OPTIONS: SortOption[] = ['featured', 'priceLow', 'priceHigh', 'nameAz', 'newest']
@@ -115,14 +118,14 @@ export default function CatalogPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-primary)_0%,transparent_50%)] opacity-[0.06]" />
         <motion.div
           animate={{ y: [-8, 8, -8] }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-12 right-[12%] text-4xl opacity-15 select-none"
-        >🎁</motion.div>
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' as const }}
+          className="absolute top-12 right-[12%] opacity-15 select-none text-primary/30"
+        ><Gift className="h-10 w-10" /></motion.div>
         <motion.div
           animate={{ y: [6, -10, 6] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-8 left-[8%] text-3xl opacity-10 select-none"
-        >🛍️</motion.div>
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' as const }}
+          className="absolute bottom-8 left-[8%] opacity-10 select-none text-primary/30"
+        ><ShoppingBag className="h-8 w-8" /></motion.div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
           <motion.div
@@ -134,7 +137,7 @@ export default function CatalogPage() {
               <ShoppingBag className="mr-1.5 h-3.5 w-3.5" />
               {t('catalog.title')}
             </Badge>
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-linear-to-r from-foreground via-foreground to-foreground/70 bg-clip-text">
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight bg-linear-to-r from-foreground via-foreground to-foreground/70 bg-clip-text">
               {t('catalog.title')}
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -158,6 +161,7 @@ export default function CatalogPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder={t('catalog.searchPlaceholder')}
+                aria-label={t('catalog.searchPlaceholder')}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 className="pl-10 pr-10"
@@ -166,6 +170,7 @@ export default function CatalogPage() {
                 <button
                   onClick={() => setSearch('')}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label={t('catalog.clearFilters')}
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -224,9 +229,11 @@ export default function CatalogPage() {
               </Button>
 
               {/* View toggle */}
-              <div className="flex items-center rounded-lg border bg-muted/40 p-0.5">
+              <div className="flex items-center rounded-lg border bg-muted/40 p-0.5" role="group" aria-label={t('catalog.view', 'View')}>
                 <button
                   onClick={() => setView('grid')}
+                  aria-label={t('catalog.gridView', 'Grid view')}
+                  aria-pressed={view === 'grid'}
                   className={cn(
                     'rounded-md p-1.5 transition-colors',
                     view === 'grid' ? 'bg-background shadow-sm text-foreground' : 'text-muted-foreground hover:text-foreground'
@@ -236,6 +243,8 @@ export default function CatalogPage() {
                 </button>
                 <button
                   onClick={() => setView('list')}
+                  aria-label={t('catalog.listView', 'List view')}
+                  aria-pressed={view === 'list'}
                   className={cn(
                     'rounded-md p-1.5 transition-colors',
                     view === 'list' ? 'bg-background shadow-sm text-foreground' : 'text-muted-foreground hover:text-foreground'
@@ -256,7 +265,7 @@ export default function CatalogPage() {
           </div>
 
           {/* Results count */}
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-muted-foreground" aria-live="polite" role="status">
             {t('catalog.showing', { count: filteredItems.length })}
           </div>
         </motion.div>
@@ -276,7 +285,7 @@ export default function CatalogPage() {
                   value={cat}
                   className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full px-4 py-1.5 text-sm transition-all"
                 >
-                  <span className="mr-1.5">{CATEGORY_EMOJI[cat]}</span>
+                  {(() => { const CatIcon = CATEGORY_ICONS[cat]; return CatIcon ? <CatIcon className="mr-1.5 h-4 w-4" /> : null })()}
                   {t(`catalog.categories.${cat}`)}
                 </TabsTrigger>
               ))}
@@ -296,7 +305,7 @@ export default function CatalogPage() {
               exit={{ opacity: 0, scale: 0.95 }}
               className="flex flex-col items-center justify-center py-24 text-center"
             >
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="mb-4"><Search className="h-14 w-14 text-muted-foreground/40 mx-auto" /></div>
               <h3 className="text-xl font-semibold mb-2">{t('catalog.noResults')}</h3>
               <p className="text-muted-foreground mb-6 max-w-md">
                 {t('catalog.subtitle')}
@@ -361,9 +370,9 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
           <div className="flex items-center gap-5 p-4">
             <motion.div
               whileHover={{ scale: 1.1, rotate: 4 }}
-              className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-muted/60 text-4xl"
+              className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-muted/60"
             >
-              {item.emoji}
+              <ItemIcon name={item.icon} className="h-8 w-8 text-primary" />
             </motion.div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
@@ -394,7 +403,7 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
                 className="gap-1.5"
               >
                 {isAdded ? <Check className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
-                {isAdded ? t('catalog.addToBox').replace(/.*/, '✓') : t('catalog.addToBox')}
+                {isAdded ? t('catalog.added') : t('catalog.addToBox')}
               </Button>
             </div>
           </div>
@@ -419,9 +428,9 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
               <motion.div
                 whileHover={{ scale: 1.15, rotate: 6 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="flex h-16 w-16 items-center justify-center rounded-2xl bg-muted/60 text-4xl shadow-sm"
+                className="flex h-16 w-16 items-center justify-center rounded-2xl bg-muted/60 shadow-sm"
               >
-                {item.emoji}
+                <ItemIcon name={item.icon} className="h-8 w-8 text-primary" />
               </motion.div>
               <div className="flex gap-1.5">
                 {item.popular && (
@@ -459,10 +468,9 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
                 className="gap-1.5 transition-all"
               >
                 {isAdded ? (
-                  <>
+                  <>  
                     <Check className="h-3.5 w-3.5" />
                     <span className="sr-only">{t('catalog.addToBox')}</span>
-                    ✓
                   </>
                 ) : (
                   <>

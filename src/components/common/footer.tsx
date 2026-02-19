@@ -18,7 +18,7 @@ export function Footer() {
                 <Gift className="h-4 w-4" />
               </div>
               <span className="font-serif text-lg font-bold">
-                GiftBox <span className="text-primary">Studio</span>
+                Prezio
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -28,7 +28,7 @@ export function Footer() {
 
           {/* Product links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">{t('footer.product')}</h4>
+            <h3 className="text-sm font-semibold mb-4">{t('footer.product')}</h3>
             <ul className="space-y-3 text-sm">
               <li><Link to={ROUTES.BUILDER} className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.builder')}</Link></li>
               <li><Link to={ROUTES.CATALOG} className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalog')}</Link></li>
@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Company links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">{t('footer.company')}</h4>
+            <h3 className="text-sm font-semibold mb-4">{t('footer.company')}</h3>
             <ul className="space-y-3 text-sm">
               <li><Link to={ROUTES.ABOUT} className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</Link></li>
               <li><Link to={ROUTES.FAQ} className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.faq')}</Link></li>
@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Legal links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">{t('footer.legal')}</h4>
+            <h3 className="text-sm font-semibold mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-3 text-sm">
               <li><Link to={ROUTES.PRIVACY} className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.privacy')}</Link></li>
               <li><Link to={ROUTES.TERMS} className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.terms')}</Link></li>

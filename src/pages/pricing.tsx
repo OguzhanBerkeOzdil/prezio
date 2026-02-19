@@ -72,7 +72,7 @@ function HeroSection() {
         <motion.h1
           {...fadeInUp}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+          className="font-serif text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
         >
           {t('pricing.title')}
         </motion.h1>
@@ -94,7 +94,7 @@ function PricingCards() {
 
   return (
     <section className="container mx-auto max-w-6xl px-4 pb-20">
-      <div className="grid gap-8 md:grid-cols-3 md:items-center">
+      <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:items-center">
         {TIERS.map((tier, i) => {
           const features = t(`pricing.tiers.${tier.key}.features`, { returnObjects: true }) as string[]
           const Icon = tier.icon

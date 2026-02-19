@@ -1,12 +1,11 @@
-export const SITE_NAME = 'GiftBox Studio'
-export const SITE_DESCRIPTION = 'Craft the perfect gift box for every occasion'
-export const SITE_URL = 'https://yourusername.github.io/giftbox-studio'
+export const SITE_NAME = 'Prezio'
+export const SITE_URL = 'https://oguzhanberkeozdil.github.io/prezio'
 
 export const STORAGE_KEYS = {
-  THEME: 'giftbox-theme',
-  LANGUAGE: 'giftbox-lang',
-  SAVED_DESIGNS: 'giftbox-saved-designs',
-  BUILDER_DRAFT: 'giftbox-builder-draft',
+  THEME: 'prezio-theme',
+  LANGUAGE: 'prezio-lang',
+  SAVED_DESIGNS: 'prezio-saved-designs',
+  BUILDER_DRAFT: 'prezio-builder-draft',
 } as const
 
 export const ROUTES = {

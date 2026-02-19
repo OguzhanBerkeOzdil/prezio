@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/giftbox-studio/sitemap.xml
+Sitemap: https://oguzhanberkeozdil.github.io/prezio/sitemap.xml

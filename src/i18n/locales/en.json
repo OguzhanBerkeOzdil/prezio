@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "GiftBox Studio",
+    "name": "Prezio",
     "tagline": "Craft the Perfect Gift Box for Every Occasion",
     "description": "Design personalized gift boxes with curated items, beautiful packaging, and heartfelt messages. Make every moment unforgettable."
   },
@@ -29,7 +29,7 @@
     "trustedBy": "Trusted by thousands of gift-givers worldwide"
   },
   "features": {
-    "sectionTitle": "Why GiftBox Studio?",
+    "sectionTitle": "Why Prezio?",
     "sectionSubtitle": "Everything you need to create unforgettable gifts",
     "curated": {
       "title": "Curated Collections",
@@ -85,7 +85,7 @@
       {
         "name": "James R.",
         "role": "Corporate Gifting",
-        "text": "We use GiftBox Studio for all our client appreciation gifts. The quality is consistent and the customization options are incredible.",
+        "text": "We use Prezio for all our client appreciation gifts. The quality is consistent and the customization options are incredible.",
         "rating": 5
       },
       {
@@ -163,7 +163,7 @@
     "company": "Company",
     "legal": "Legal",
     "social": "Follow Us",
-    "copyright": "© 2026 GiftBox Studio. All rights reserved.",
+    "copyright": "© 2026 Prezio. All rights reserved.",
     "madeWith": "Made with ❤️ for gift lovers everywhere"
   },
   "catalog": {
@@ -173,6 +173,7 @@
     "allCategories": "All Categories",
     "noResults": "No items found. Try adjusting your filters.",
     "addToBox": "Add to Box",
+    "added": "Added",
     "viewDetails": "View Details",
     "recommended": "Recommended",
     "popular": "Popular",
@@ -182,7 +183,8 @@
     "priceRange": "Price Range",
     "category": "Category",
     "clearFilters": "Clear Filters",
-    "showing": "Showing {{count}} items",
+    "showing_one": "Showing {{count}} item",
+    "showing_other": "Showing {{count}} items",
     "sortOptions": {
       "featured": "Featured",
       "priceLow": "Price: Low to High",
@@ -285,17 +287,17 @@
           "S": {
             "label": "Small",
             "description": "Perfect for a few special items",
-            "items": "Up to 3 items"
+            "items": "Up to {{count}} items"
           },
           "M": {
             "label": "Medium",
             "description": "Our most popular size",
-            "items": "Up to 6 items"
+            "items": "Up to {{count}} items"
           },
           "L": {
             "label": "Large",
             "description": "For grand gestures",
-            "items": "Up to 10 items"
+            "items": "Up to {{count}} items"
           }
         },
         "style": "Packaging Style",
@@ -347,7 +349,8 @@
         "added": "Added",
         "add": "Add",
         "remove": "Remove",
-        "itemsSelected": "{{count}} item(s) selected",
+        "itemsSelected_one": "{{count}} item selected",
+        "itemsSelected_other": "{{count}} items selected",
         "maxItems": "Maximum {{max}} items for this box size",
         "boxFull": "Your box is full! Upgrade to a larger size for more items."
       },
@@ -404,7 +407,7 @@
         "placeOrder": "Place Order",
         "demoNotice": "This is a demo. No real charges will be made.",
         "orderPlaced": "Order Placed!",
-        "orderMessage": "Your gift box has been created! In a real app, this would be processed and shipped. Thanks for trying GiftBox Studio!",
+        "orderMessage": "Your gift box has been created! In a real app, this would be processed and shipped. Thanks for trying Prezio!",
         "backToHome": "Back to Home",
         "buildAnother": "Build Another Box"
       }
@@ -433,7 +436,7 @@
       "Free online builder tool",
       "Digital box preview",
       "Save unlimited designs",
-      "Bilingual support (EN/TR)",
+      "Multilingual support (EN/TR/PL)",
       "No account required"
     ],
     "tiers": {
@@ -476,13 +479,13 @@
     }
   },
   "about": {
-    "title": "About GiftBox Studio",
+    "title": "About Prezio",
     "subtitle": "We believe every gift should tell a story",
     "story": {
       "title": "Our Story",
-      "p1": "GiftBox Studio was born from a simple idea: gift-giving should be joyful, not stressful. We noticed that people often struggle to find the right gift, spend hours searching online, and still end up unsure if their choice will bring a smile.",
+      "p1": "Prezio was born from a simple idea: gift-giving should be joyful, not stressful. We noticed that people often struggle to find the right gift, spend hours searching online, and still end up unsure if their choice will bring a smile.",
       "p2": "So we built a platform that guides you through the process — from choosing the occasion to crafting a heartfelt message. Every item in our catalog is handpicked for quality and thoughtfulness.",
-      "p3": "Whether you're celebrating a birthday, saying thank you, or just letting someone know you care, GiftBox Studio makes it easy to create something truly special."
+      "p3": "Whether you're celebrating a birthday, saying thank you, or just letting someone know you care, Prezio makes it easy to create something truly special."
     },
     "mission": {
       "title": "Our Mission",
@@ -524,7 +527,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about GiftBox Studio",
+    "subtitle": "Everything you need to know about Prezio",
     "items": [
       {
         "question": "How does the Gift Box Builder work?",
@@ -532,7 +535,7 @@
       },
       {
         "question": "Is this a real e-commerce platform?",
-        "answer": "GiftBox Studio is currently a design showcase and demo. The builder is fully functional for designing boxes, but no real payments or shipments are processed. Think of it as a preview of what's possible!"
+        "answer": "Prezio is currently a design showcase and demo. The builder is fully functional for designing boxes, but no real payments or shipments are processed. Think of it as a preview of what's possible!"
       },
       {
         "question": "Can I save my designs?",
@@ -560,7 +563,7 @@
       },
       {
         "question": "Is the site available in other languages?",
-        "answer": "Currently, GiftBox Studio is available in English and Turkish. Use the language switcher in the header to change languages at any time."
+        "answer": "Prezio is available in English, Turkish, and Polish. You can switch languages anytime using the language selector in the header."
       },
       {
         "question": "How do I share my design with someone?",
@@ -588,10 +591,10 @@
       "error": "Something went wrong. Please try again."
     },
     "info": {
-      "email": "hello@giftboxstudio.com",
-      "phone": "+1 (555) 123-4567",
-      "address": "123 Gift Lane, Creative District, CA 90210",
-      "hours": "Monday - Friday, 9 AM - 6 PM PST"
+      "email": "hello@prezio.app",
+      "phone": "",
+      "address": "Warsaw, Poland",
+      "hours": "Monday – Friday, 9:00 – 18:00 CET"
     },
     "validation": {
       "nameRequired": "Name is required",
@@ -637,12 +640,12 @@
     "privacy": {
       "title": "Privacy Policy",
       "lastUpdated": "Last updated: February 2026",
-      "content": "GiftBox Studio is a demonstration application. This privacy policy is provided for completeness.\n\n**Information We Collect**\nThis demo application stores only your preferences (theme, language) and saved gift box designs in your browser's local storage. No personal data is sent to any server.\n\n**Cookies & Local Storage**\nWe use browser local storage to persist your theme preference, language selection, and saved designs. No tracking cookies are used.\n\n**Third-Party Services**\nThis site may use Google Fonts for typography. No analytics or tracking services are active.\n\n**Data Retention**\nAll data is stored locally on your device. You can clear it at any time through your browser settings.\n\n**Contact**\nFor any questions about this policy, please use our contact form."
+      "content": "Prezio is a demonstration application. This privacy policy is provided for completeness.\n\n**Information We Collect**\nThis demo application stores only your preferences (theme, language) and saved gift box designs in your browser's local storage. No personal data is sent to any server.\n\n**Cookies & Local Storage**\nWe use browser local storage to persist your theme preference, language selection, and saved designs. No tracking cookies are used.\n\n**Third-Party Services**\nThis site may use Google Fonts for typography. No analytics or tracking services are active.\n\n**Data Retention**\nAll data is stored locally on your device. You can clear it at any time through your browser settings.\n\n**Contact**\nFor any questions about this policy, please use our contact form."
     },
     "terms": {
       "title": "Terms of Service",
       "lastUpdated": "Last updated: February 2026",
-      "content": "GiftBox Studio is a demonstration and portfolio project. These terms are for illustrative purposes.\n\n**Acceptance**\nBy accessing GiftBox Studio, you agree to these terms.\n\n**Service Description**\nGiftBox Studio is a frontend demonstration of a gift box building experience. No real products are sold, no payments are processed, and no deliveries are made.\n\n**Intellectual Property**\nThe design, code, and content of this site are created for demonstration purposes.\n\n**Limitation of Liability**\nThis is a non-commercial demo. No warranties or guarantees are made regarding the service.\n\n**Changes**\nThese terms may be updated at any time without notice.\n\n**Contact**\nFor questions, please use our contact form."
+      "content": "Prezio is a demonstration and portfolio project. These terms are for illustrative purposes.\n\n**Acceptance**\nBy accessing Prezio, you agree to these terms.\n\n**Service Description**\nPrezio is a frontend demonstration of a gift box building experience. No real products are sold, no payments are processed, and no deliveries are made.\n\n**Intellectual Property**\nThe design, code, and content of this site are created for demonstration purposes.\n\n**Limitation of Liability**\nThis is a non-commercial demo. No warranties or guarantees are made regarding the service.\n\n**Changes**\nThese terms may be updated at any time without notice.\n\n**Contact**\nFor questions, please use our contact form."
     }
   },
   "notFound": {

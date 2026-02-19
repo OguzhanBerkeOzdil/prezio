@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import {
   Gift, Palette, Truck, Heart, Sparkles, DollarSign, Zap,
-  Star, ChevronRight, ArrowRight, Package, Check
+  Star, ChevronRight, ArrowRight, Package, Check, Target, Rocket,
+  Ribbon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -16,7 +17,7 @@ const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-50px' },
-  transition: { duration: 0.6, ease: 'easeOut' },
+  transition: { duration: 0.6, ease: 'easeOut' as const },
 }
 
 const staggerContainer = {
@@ -37,40 +38,40 @@ function HeroSection() {
   return (
     <section className="relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-primary)_0%,_transparent_50%)] opacity-[0.07]" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-secondary/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-primary)_0%,transparent_50%)] opacity-[0.07]" />
       
       {/* Floating decorations */}
       <motion.div
         animate={{ y: [-10, 10, -10] }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-20 left-[10%] text-4xl opacity-20 select-none"
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' as const }}
+        className="absolute top-20 left-[10%] opacity-20 select-none text-primary/40"
       >
-        🎁
+        <Gift className="h-10 w-10" aria-hidden="true" />
       </motion.div>
       <motion.div
         animate={{ y: [10, -10, 10] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-40 right-[15%] text-3xl opacity-20 select-none"
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' as const }}
+        className="absolute top-40 right-[15%] opacity-20 select-none text-primary/40"
       >
-        ✨
+        <Sparkles className="h-8 w-8" aria-hidden="true" />
       </motion.div>
       <motion.div
         animate={{ y: [-8, 12, -8] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute bottom-20 left-[20%] text-3xl opacity-15 select-none"
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' as const }}
+        className="absolute bottom-20 left-[20%] opacity-15 select-none text-primary/40"
       >
-        🎀
+        <Ribbon className="h-8 w-8" aria-hidden="true" />
       </motion.div>
       <motion.div
         animate={{ y: [12, -8, 12] }}
-        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute bottom-32 right-[25%] text-2xl opacity-15 select-none"
+        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' as const }}
+        className="absolute bottom-32 right-[25%] opacity-15 select-none text-primary/40"
       >
-        💝
+        <Heart className="h-7 w-7" aria-hidden="true" />
       </motion.div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-40">
         <div className="text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -87,9 +88,9 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]"
+            className="font-serif text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]"
           >
-            <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
               {t('hero.title')}
             </span>
           </motion.h1>
@@ -131,11 +132,14 @@ function HeroSection() {
             className="mt-8 text-sm text-muted-foreground flex items-center justify-center gap-2"
           >
             <span className="flex -space-x-2">
-              {['🧑', '👩', '👨', '👩‍🦰'].map((emoji, i) => (
-                <span key={i} className="flex h-7 w-7 items-center justify-center rounded-full bg-muted ring-2 ring-background text-sm">
-                  {emoji}
-                </span>
-              ))}
+              {['A', 'M', 'J', 'K'].map((initial, i) => {
+                const colors = ['bg-primary/20 text-primary', 'bg-secondary/20 text-secondary', 'bg-amber-100 text-amber-700', 'bg-emerald-100 text-emerald-700']
+                return (
+                  <span key={i} className={`flex h-7 w-7 items-center justify-center rounded-full ring-2 ring-background text-xs font-semibold ${colors[i]}`}>
+                    {initial}
+                  </span>
+                )
+              })}
             </span>
             {t('hero.trustedBy')}
           </motion.p>
@@ -189,9 +193,9 @@ function HowItWorksSection() {
   const { t } = useTranslation()
 
   const steps = [
-    { key: 'step1', icon: Heart, emoji: '🎯' },
-    { key: 'step2', icon: Package, emoji: '📦' },
-    { key: 'step3', icon: Sparkles, emoji: '🚀' },
+    { key: 'step1', icon: Heart, StepIcon: Target },
+    { key: 'step2', icon: Package, StepIcon: Package },
+    { key: 'step3', icon: Sparkles, StepIcon: Rocket },
   ]
 
   return (
@@ -214,11 +218,11 @@ function HowItWorksSection() {
             >
               {/* Connector line */}
               {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-px bg-gradient-to-r from-primary/30 to-transparent" />
+                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-px bg-linear-to-r from-primary/30 to-transparent" />
               )}
               
-              <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 text-4xl">
-                {step.emoji}
+              <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-2xl bg-linear-to-br from-primary/10 to-secondary/10">
+                <step.StepIcon className="h-10 w-10 text-primary" />
               </div>
               <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold mb-4">
                 {idx + 1}
@@ -350,7 +354,7 @@ function CTASection() {
 
   return (
     <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10" />
+      <div className="absolute inset-0 bg-linear-to-r from-primary/10 via-secondary/10 to-primary/10" />
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.div {...fadeInUp}>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">

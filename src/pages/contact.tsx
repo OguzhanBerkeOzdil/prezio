@@ -54,7 +54,7 @@ const infoCards = [
 function HeroSection() {
   const { t } = useTranslation()
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
       <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-secondary/5" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-primary)_0%,transparent_50%)] opacity-[0.07]" />
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
@@ -67,7 +67,7 @@ function HeroSection() {
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
             <Mail className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
             {t('contact.title')}
           </h1>
           <p className="mt-2 max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
@@ -145,7 +145,7 @@ function ContactForm() {
     <motion.div {...fadeInUp}>
       <Card>
         <CardHeader>
-          <CardTitle>{t('contact.form.name')}</CardTitle>
+          <CardTitle>{t('contact.title')}</CardTitle>
           <CardDescription>{t('contact.subtitle')}</CardDescription>
         </CardHeader>
         <Separator className="mb-6" />
@@ -158,10 +158,12 @@ function ContactForm() {
                 id="name"
                 placeholder={t('contact.form.namePlaceholder')}
                 className={cn(errors.name && 'border-destructive focus-visible:ring-destructive')}
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? 'name-error' : undefined}
                 {...register('name')}
               />
               {errors.name && (
-                <p className="text-sm text-destructive">{errors.name.message}</p>
+                <p id="name-error" className="text-sm text-destructive" role="alert">{errors.name.message}</p>
               )}
             </div>
 
@@ -173,10 +175,12 @@ function ContactForm() {
                 type="email"
                 placeholder={t('contact.form.emailPlaceholder')}
                 className={cn(errors.email && 'border-destructive focus-visible:ring-destructive')}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? 'email-error' : undefined}
                 {...register('email')}
               />
               {errors.email && (
-                <p className="text-sm text-destructive">{errors.email.message}</p>
+                <p id="email-error" className="text-sm text-destructive" role="alert">{errors.email.message}</p>
               )}
             </div>
 
@@ -187,10 +191,12 @@ function ContactForm() {
                 id="subject"
                 placeholder={t('contact.form.subjectPlaceholder')}
                 className={cn(errors.subject && 'border-destructive focus-visible:ring-destructive')}
+                aria-invalid={!!errors.subject}
+                aria-describedby={errors.subject ? 'subject-error' : undefined}
                 {...register('subject')}
               />
               {errors.subject && (
-                <p className="text-sm text-destructive">{errors.subject.message}</p>
+                <p id="subject-error" className="text-sm text-destructive" role="alert">{errors.subject.message}</p>
               )}
             </div>
 
@@ -202,10 +208,12 @@ function ContactForm() {
                 rows={5}
                 placeholder={t('contact.form.messagePlaceholder')}
                 className={cn(errors.message && 'border-destructive focus-visible:ring-destructive')}
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? 'message-error' : undefined}
                 {...register('message')}
               />
               {errors.message && (
-                <p className="text-sm text-destructive">{errors.message.message}</p>
+                <p id="message-error" className="text-sm text-destructive" role="alert">{errors.message.message}</p>
               )}
             </div>
 

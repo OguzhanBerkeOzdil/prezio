@@ -61,7 +61,7 @@ export default function FAQPage() {
           <motion.h1
             {...fadeInUp}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+            className="font-serif text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
             {t('faq.title')}
           </motion.h1>

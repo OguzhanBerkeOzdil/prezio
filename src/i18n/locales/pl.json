@@ -1,0 +1,679 @@
+{
+  "site": {
+    "name": "Prezio",
+    "tagline": "Stwórz idealny zestaw prezentowy na każdą okazję",
+    "description": "Projektuj spersonalizowane zestawy prezentowe z wyselekcjonowanymi produktami, pięknym opakowaniem i serdecznym przesłaniem. Spraw, by każda chwila była niezapomniana."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "builder": "Stwórz zestaw",
+    "catalog": "Katalog",
+    "pricing": "Cennik",
+    "about": "O nas",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "profile": "Moje projekty",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin",
+    "language": "Język",
+    "theme": "Motyw",
+    "lightMode": "Tryb jasny",
+    "darkMode": "Tryb ciemny"
+  },
+  "hero": {
+    "badge": "Ręcznie tworzone z miłością",
+    "title": "Twórz zestawy prezentowe, które opowiadają Twoją historię",
+    "subtitle": "Od wyboru idealnych produktów po stworzenie serdecznego przesłania — nasze studio zamienia dawanie prezentów w sztukę. Każdy zestaw to małe arcydzieło.",
+    "cta": "Zacznij tworzyć",
+    "secondaryCta": "Przeglądaj katalog",
+    "trustedBy": "Zaufały nam tysiące osób wręczających prezenty na całym świecie"
+  },
+  "features": {
+    "sectionTitle": "Dlaczego Prezio?",
+    "sectionSubtitle": "Wszystko, czego potrzebujesz, by tworzyć niezapomniane prezenty",
+    "curated": {
+      "title": "Wyselekcjonowane kolekcje",
+      "description": "Starannie dobrane produkty od najlepszych marek, uporządkowane według okazji i stylu."
+    },
+    "personalized": {
+      "title": "Pełna personalizacja",
+      "description": "Wybierz pudełko, produkty, opakowanie, kartkę i wiadomość — z dbałością o każdy szczegół."
+    },
+    "delivery": {
+      "title": "Piękna dostawa",
+      "description": "Ekskluzywne opakowanie z opcjami ekologicznymi. Gotowe, by zachwycić."
+    },
+    "occasions": {
+      "title": "Na każdą okazję",
+      "description": "Urodziny, śluby, święta, podziękowania i nie tylko — mamy wszystko, czego potrzebujesz."
+    },
+    "budget": {
+      "title": "Na każdy budżet",
+      "description": "Od przemyślanych zestawów podstawowych po luksusowe pakiety deluxe."
+    },
+    "fast": {
+      "title": "Szybko i łatwo",
+      "description": "Nasz kreator przeprowadzi Cię od pomysłu do gotowego zestawu w kilka minut."
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "Jak to działa",
+    "sectionSubtitle": "Trzy proste kroki do idealnego prezentu",
+    "step1": {
+      "title": "Wybierz okazję",
+      "description": "Powiedz nam, dla kogo to jest i co świętujecie. Zaproponujemy odpowiednie produkty."
+    },
+    "step2": {
+      "title": "Stwórz swój zestaw",
+      "description": "Wybierz produkty, dostosuj opakowanie, napisz wiadomość i zobacz podgląd."
+    },
+    "step3": {
+      "title": "Podaruj radość",
+      "description": "Złóż zamówienie i pozwól, by magia zadziałała. To takie proste."
+    }
+  },
+  "testimonials": {
+    "sectionTitle": "Kochane przez darczyńców",
+    "sectionSubtitle": "Zobacz, co mówi nasza społeczność",
+    "items": [
+      {
+        "name": "Kasia M.",
+        "role": "Entuzjastka urodzin",
+        "text": "Wysłałam mojej najlepszej przyjaciółce spersonalizowany zestaw urodzinowy i dosłownie się rozpłakała. Prezentacja była oszałamiająca, a każdy produkt był tak przemyślany.",
+        "rating": 5
+      },
+      {
+        "name": "Jakub R.",
+        "role": "Prezenty firmowe",
+        "text": "Korzystamy z Prezio przy wszystkich prezentach dla naszych klientów. Jakość jest niezmienna, a możliwości personalizacji niesamowite.",
+        "rating": 5
+      },
+      {
+        "name": "Anna K.",
+        "role": "Wedding Plannerka",
+        "text": "Zestawy dla druhen, które stworzyłam, okazały się ogromnym hitem. Wszyscy byli zachwyceni dbałością o szczegóły i pięknym opakowaniem.",
+        "rating": 5
+      },
+      {
+        "name": "Dawid L.",
+        "role": "Nowy użytkownik",
+        "text": "Jako ktoś, kto jest beznadziejny w dawaniu prezentów, ta aplikacja uratowała mi życie. Propozycje były trafione, a cały proces bezproblemowy.",
+        "rating": 5
+      }
+    ]
+  },
+  "pricingPreview": {
+    "sectionTitle": "Prosty, przejrzysty cennik",
+    "sectionSubtitle": "Wybierz idealny pakiet dla swojego prezentu",
+    "starter": {
+      "name": "Starter",
+      "price": "$25",
+      "period": "za zestaw",
+      "description": "Idealny na przemyślany, osobisty gest",
+      "features": [
+        "Małe pudełko",
+        "Do 3 produktów",
+        "Klasyczne opakowanie",
+        "Standardowa kartka",
+        "Bezpłatny podgląd cyfrowy"
+      ]
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$50",
+      "period": "za zestaw",
+      "description": "Nasz najpopularniejszy wybór na wyjątkowe okazje",
+      "badge": "Najpopularniejszy",
+      "features": [
+        "Średnie pudełko",
+        "Do 6 produktów",
+        "Luksusowe opakowanie",
+        "Ekskluzywna kartka z kopertą",
+        "Pakowanie prezentowe w cenie",
+        "Priorytetowa realizacja"
+      ]
+    },
+    "deluxe": {
+      "name": "Deluxe",
+      "price": "$90",
+      "period": "za zestaw",
+      "description": "Wyjątkowe wrażenia podarunkowe bez kompromisów",
+      "features": [
+        "Duże pudełko",
+        "Do 10 produktów",
+        "Luksusowe opakowanie ze wstążką",
+        "Kartka w stylu odręcznym",
+        "Ekskluzywne pakowanie prezentowe",
+        "Dostawa ekspresowa",
+        "Dodatek ze zdjęciem"
+      ]
+    },
+    "cta": "Zacznij teraz",
+    "viewAll": "Zobacz pełny cennik"
+  },
+  "cta": {
+    "title": "Gotowy, by stworzyć coś wyjątkowego?",
+    "subtitle": "Zacznij tworzyć swój idealny zestaw prezentowy już dziś. Wystarczy kilka minut, by stworzyć prezent, którego nie zapomną.",
+    "button": "Zacznij tworzyć teraz",
+    "noCreditCard": "Bez konta • Projekty zapisywane lokalnie"
+  },
+  "footer": {
+    "description": "Tworzymy niezapomniane wrażenia podarunkowe, zestaw po zestawie. Projektuj spersonalizowane zestawy prezentowe na każdą okazję.",
+    "product": "Produkt",
+    "company": "Firma",
+    "legal": "Prawne",
+    "social": "Obserwuj nas",
+    "copyright": "© 2026 Prezio. Wszelkie prawa zastrzeżone.",
+    "madeWith": "Stworzone z ❤️ dla miłośników prezentów na całym świecie"
+  },
+  "catalog": {
+    "title": "Katalog prezentów",
+    "subtitle": "Odkryj naszą wyselekcjonowaną kolekcję ekskluzywnych produktów",
+    "searchPlaceholder": "Szukaj produktów...",
+    "allCategories": "Wszystkie kategorie",
+    "noResults": "Nie znaleziono produktów. Spróbuj zmienić filtry.",
+    "addToBox": "Dodaj do zestawu",
+    "added": "Dodano",
+    "viewDetails": "Zobacz szczegóły",
+    "recommended": "Polecane",
+    "popular": "Popularne",
+    "new": "Nowość",
+    "filters": "Filtry",
+    "sortBy": "Sortuj według",
+    "priceRange": "Zakres cenowy",
+    "category": "Kategoria",
+    "clearFilters": "Wyczyść filtry",
+    "showing_one": "Wyświetlanie {{count}} produktu",
+    "showing_few": "Wyświetlanie {{count}} produktów",
+    "showing_many": "Wyświetlanie {{count}} produktów",
+    "showing_other": "Wyświetlanie {{count}} produktów",
+    "sortOptions": {
+      "featured": "Wyróżnione",
+      "priceLow": "Cena: od najniższej",
+      "priceHigh": "Cena: od najwyższej",
+      "nameAz": "Nazwa: A do Z",
+      "newest": "Najnowsze"
+    },
+    "categories": {
+      "all": "Wszystkie",
+      "chocolates": "Czekolady i słodycze",
+      "candles": "Świece i zapachy",
+      "accessories": "Akcesoria",
+      "wellness": "Wellness i spa",
+      "drinks": "Napoje",
+      "stationery": "Artykuły papiernicze i książki",
+      "tech": "Technologia i gadżety",
+      "home": "Dom i dekoracje"
+    }
+  },
+  "builder": {
+    "title": "Kreator zestawów prezentowych",
+    "subtitle": "Zaprojektuj idealny prezent w kilku prostych krokach",
+    "next": "Następny krok",
+    "previous": "Wstecz",
+    "finish": "Złóż zamówienie",
+    "saveDesign": "Zapisz projekt",
+    "loadDesign": "Wczytaj projekt",
+    "resetBuilder": "Zacznij od nowa",
+    "summary": "Podsumowanie zamówienia",
+    "totalPrice": "Razem",
+    "steps": {
+      "occasion": {
+        "title": "Okazja",
+        "subtitle": "Co świętujemy?",
+        "description": "Wybierz okazję dla swojego zestawu prezentowego. Pomoże nam to zaproponować idealne produkty i motywy.",
+        "options": {
+          "birthday": "Urodziny",
+          "anniversary": "Rocznica",
+          "valentine": "Walentynki",
+          "christmas": "Boże Narodzenie",
+          "halloween": "Halloween",
+          "graduation": "Zakończenie szkoły",
+          "newBaby": "Narodziny dziecka",
+          "thankYou": "Podziękowanie",
+          "getWell": "Szybkiego powrotu do zdrowia",
+          "wedding": "Ślub",
+          "housewarming": "Parapetówka",
+          "justBecause": "Po prostu tak"
+        }
+      },
+      "recipient": {
+        "title": "Obdarowany",
+        "subtitle": "Kto jest tym szczęściarzem?",
+        "description": "Powiedz nam coś o obdarowanej osobie, żebyśmy mogli dopasować nasze propozycje.",
+        "relationship": "Relacja",
+        "relationships": {
+          "partner": "Partner / Małżonek",
+          "friend": "Przyjaciel",
+          "parent": "Rodzic",
+          "sibling": "Rodzeństwo",
+          "colleague": "Współpracownik",
+          "child": "Dziecko",
+          "teacher": "Nauczyciel / Mentor",
+          "other": "Inny"
+        },
+        "interests": "Zainteresowania",
+        "interestTags": {
+          "foodie": "Smakosz",
+          "fitness": "Fitness",
+          "bookworm": "Mól książkowy",
+          "techLover": "Fan technologii",
+          "artist": "Kreatywna dusza",
+          "natureLover": "Miłośnik natury",
+          "fashionista": "Fashionista",
+          "gamer": "Gracz",
+          "traveler": "Podróżnik",
+          "musician": "Meloman"
+        },
+        "name": "Imię obdarowanego (opcjonalne)",
+        "namePlaceholder": "Wpisz imię"
+      },
+      "budget": {
+        "title": "Budżet",
+        "subtitle": "Ustal zakres wydatków",
+        "description": "Przesuń suwak lub wybierz gotowy pakiet. Zaproponujemy pasujące produkty.",
+        "custom": "Kwota własna",
+        "presets": {
+          "budget": "Ekonomiczny",
+          "standard": "Standardowy",
+          "premium": "Premium",
+          "luxury": "Luksusowy"
+        }
+      },
+      "packaging": {
+        "title": "Opakowanie",
+        "subtitle": "Wybierz pudełko i pakowanie",
+        "description": "Wybierz rozmiar pudełka i styl opakowania najlepiej pasujący do Twojego prezentu.",
+        "boxSize": "Rozmiar pudełka",
+        "sizes": {
+          "S": {
+            "label": "Małe",
+            "description": "Idealne na kilka wyjątkowych drobiazgów",
+            "items": "Do {{count}} produktów"
+          },
+          "M": {
+            "label": "Średnie",
+            "description": "Nasz najpopularniejszy rozmiar",
+            "items": "Do {{count}} produktów"
+          },
+          "L": {
+            "label": "Duże",
+            "description": "Na wielkie gesty",
+            "items": "Do {{count}} produktów"
+          }
+        },
+        "style": "Styl opakowania",
+        "styles": {
+          "classic": {
+            "label": "Klasyczny",
+            "description": "Eleganckie wykończenie z papieru kraft"
+          },
+          "luxury": {
+            "label": "Luksusowy",
+            "description": "Satynowa wstążka i metaliczne akcenty"
+          },
+          "eco": {
+            "label": "Ekologiczny",
+            "description": "100% materiałów z recyklingu, naturalnie piękne"
+          }
+        }
+      },
+      "theme": {
+        "title": "Motyw",
+        "subtitle": "Ustaw nastrój",
+        "description": "Wybierz paletę kolorów i wzór dla swojego zestawu prezentowego.",
+        "colorPalette": "Paleta kolorów",
+        "pattern": "Wzór",
+        "palettes": {
+          "rose": "Różowe złoto",
+          "ocean": "Błękit oceanu",
+          "forest": "Zieleń lasu",
+          "sunset": "Ciepły zachód słońca",
+          "midnight": "Północny fiolet",
+          "minimal": "Minimalistyczna biel",
+          "festive": "Świąteczna czerwień",
+          "pastel": "Delikatny pastel"
+        },
+        "patterns": {
+          "none": "Brak (jednolity)",
+          "dots": "Kropki",
+          "stripes": "Paski",
+          "floral": "Kwiaty",
+          "geometric": "Geometryczny",
+          "stars": "Gwiazdki"
+        }
+      },
+      "items": {
+        "title": "Wybierz produkty",
+        "subtitle": "Wypełnij swój zestaw radością",
+        "description": "Przeglądaj i dodawaj produkty do zestawu prezentowego. Wyróżniliśmy rekomendacje na podstawie Twoich wyborów.",
+        "search": "Szukaj produktów...",
+        "added": "Dodano",
+        "add": "Dodaj",
+        "remove": "Usuń",
+        "itemsSelected_one": "Wybrano {{count}} produkt",
+        "itemsSelected_few": "Wybrano {{count}} produkty",
+        "itemsSelected_many": "Wybrano {{count}} produktów",
+        "itemsSelected_other": "Wybrano {{count}} produktów",
+        "maxItems": "Maksymalnie {{max}} produktów dla tego rozmiaru pudełka",
+        "boxFull": "Twój zestaw jest pełny! Zmień na większy rozmiar, by dodać więcej produktów."
+      },
+      "card": {
+        "title": "Kartka z życzeniami",
+        "subtitle": "Pisz prosto z serca",
+        "description": "Dodaj osobistą wiadomość do prezentu. Wybierz ton lub napisz własną.",
+        "message": "Twoja wiadomość",
+        "messagePlaceholder": "Napisz serdeczną wiadomość...",
+        "characters": "{{count}}/{{max}} znaków",
+        "tones": {
+          "heartfelt": "Serdeczny",
+          "funny": "Zabawny",
+          "formal": "Oficjalny",
+          "romantic": "Romantyczny",
+          "casual": "Swobodny"
+        },
+        "tonePresets": {
+          "heartfelt": "Życzę Ci całego szczęścia tego świata. Zasługujesz na wszystko, co piękne. Z miłością i ciepłem.",
+          "funny": "Mówią, że za pieniądze nie kupisz szczęścia, ale można kupić ten zestaw prezentowy, a to całkiem blisko! Ciesz się! 🎉",
+          "formal": "Proszę przyjąć ten prezent jako wyraz uznania. Pana/Pani obecność i wkład są naprawdę cenione.",
+          "romantic": "Każda chwila z Tobą to prezent. Ten zestaw to tylko małe przypomnienie, jak wiele dla mnie znaczysz. Na zawsze Twój/Twoja.",
+          "casual": "Hej! Zobaczyłem/am kilka rzeczy, które mi o Tobie przypomniały. Mam nadzieję, że wywołają uśmiech na Twojej twarzy. Ciesz się!"
+        },
+        "addCard": "Dodaj kartkę (+$3)",
+        "includeCard": "Dołącz kartkę z życzeniami"
+      },
+      "preview": {
+        "title": "Podgląd",
+        "subtitle": "Twoje dzieło czeka",
+        "description": "Sprawdź swój zestaw prezentowy przed złożeniem zamówienia. Wszystko wygląda idealnie?",
+        "occasion": "Okazja",
+        "recipient": "Obdarowany",
+        "packaging": "Opakowanie",
+        "theme": "Motyw",
+        "items": "Produkty",
+        "cardMessage": "Wiadomość na kartce",
+        "revealBox": "Odkryj swój zestaw",
+        "editStep": "Edytuj",
+        "looksGreat": "Wygląda świetnie!"
+      },
+      "checkout": {
+        "title": "Zamówienie",
+        "subtitle": "Prawie gotowe!",
+        "description": "Podaj dane dostawy, aby sfinalizować zamówienie zestawu prezentowego.",
+        "recipientName": "Imię i nazwisko odbiorcy",
+        "address": "Adres dostawy",
+        "city": "Miasto",
+        "zipCode": "Kod pocztowy",
+        "country": "Kraj",
+        "deliveryDate": "Preferowana data dostawy",
+        "notes": "Uwagi do dostawy (opcjonalne)",
+        "notesPlaceholder": "Specjalne instrukcje...",
+        "placeOrder": "Złóż zamówienie",
+        "demoNotice": "To jest wersja demonstracyjna. Żadne opłaty nie zostaną naliczone.",
+        "orderPlaced": "Zamówienie złożone!",
+        "orderMessage": "Twój zestaw prezentowy został utworzony! W prawdziwej aplikacji zostałby teraz przetworzony i wysłany. Dziękujemy za wypróbowanie Prezio!",
+        "backToHome": "Wróć na stronę główną",
+        "buildAnother": "Stwórz kolejny zestaw"
+      }
+    },
+    "pricing": {
+      "baseBox": "Pudełko bazowe",
+      "items": "Produkty",
+      "packaging": "Opłata za opakowanie",
+      "giftCard": "Kartka z życzeniami",
+      "subtotal": "Suma częściowa",
+      "total": "Razem"
+    }
+  },
+  "pricing": {
+    "title": "Cennik",
+    "subtitle": "Przejrzyste ceny na każdy budżet",
+    "description": "Wybierz pakiet, który Ci odpowiada. Każdy zestaw zawiera bezpłatne narzędzia projektowe i podgląd cyfrowy.",
+    "monthly": "Miesięcznie",
+    "annually": "Rocznie",
+    "perBox": "za zestaw",
+    "getStarted": "Zacznij teraz",
+    "mostPopular": "Najpopularniejszy",
+    "features": "Co zawiera",
+    "allPlansInclude": "Każdy plan zawiera",
+    "commonFeatures": [
+      "Bezpłatny kreator online",
+      "Cyfrowy podgląd zestawu",
+      "Nieograniczona liczba zapisanych projektów",
+      "Wsparcie wielojęzyczne (EN/TR/PL)",
+      "Bez konieczności zakładania konta"
+    ],
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "price": "$25",
+        "description": "Na przemyślane, osobiste prezenty",
+        "features": [
+          "Małe pudełko (do 3 produktów)",
+          "Klasyczne opakowanie",
+          "Standardowa kartka z życzeniami",
+          "Dostawa w ciągu 5 dni roboczych"
+        ]
+      },
+      "plus": {
+        "name": "Plus",
+        "price": "$50",
+        "description": "Nasz najpopularniejszy wybór",
+        "features": [
+          "Średnie pudełko (do 6 produktów)",
+          "Opakowanie luksusowe lub ekologiczne",
+          "Ekskluzywna kartka z kopertą",
+          "Pakowanie prezentowe w cenie",
+          "Dostawa w ciągu 3 dni roboczych"
+        ]
+      },
+      "deluxe": {
+        "name": "Deluxe",
+        "price": "$90",
+        "description": "Wyjątkowe wrażenia podarunkowe",
+        "features": [
+          "Duże pudełko (do 10 produktów)",
+          "Ekskluzywne opakowanie luksusowe",
+          "Kartka w stylu odręcznym",
+          "Ekskluzywne pakowanie prezentowe",
+          "Dostawa ekspresowa następnego dnia",
+          "Dodatek ze zdjęciem"
+        ]
+      }
+    }
+  },
+  "about": {
+    "title": "O Prezio",
+    "subtitle": "Wierzymy, że każdy prezent powinien opowiadać historię",
+    "story": {
+      "title": "Nasza historia",
+      "p1": "Prezio narodziło się z prostego pomysłu: dawanie prezentów powinno być radosne, a nie stresujące. Zauważyliśmy, że ludzie często mają trudności ze znalezieniem odpowiedniego prezentu, spędzają godziny na szukaniu w internecie i wciąż nie są pewni, czy ich wybór wywoła uśmiech.",
+      "p2": "Dlatego stworzyliśmy platformę, która przeprowadzi Cię przez cały proces — od wyboru okazji po stworzenie serdecznej wiadomości. Każdy produkt w naszym katalogu jest starannie wyselekcjonowany pod kątem jakości i przemyślaności.",
+      "p3": "Niezależnie od tego, czy świętujecie urodziny, chcecie podziękować, czy po prostu dać komuś znać, że Wam na nim zależy — Prezio ułatwia stworzenie czegoś naprawdę wyjątkowego."
+    },
+    "mission": {
+      "title": "Nasza misja",
+      "text": "Sprawić, by spersonalizowane prezenty były dostępne, radosne i pełne znaczenia dla każdego."
+    },
+    "values": {
+      "title": "Nasze wartości",
+      "quality": {
+        "title": "Jakość przede wszystkim",
+        "description": "Każdy oferowany przez nas produkt przechodzi rygorystyczną kontrolę jakości."
+      },
+      "sustainability": {
+        "title": "Zrównoważony rozwój",
+        "description": "Ekologiczne opcje opakowań i odpowiedzialne pozyskiwanie materiałów."
+      },
+      "personalization": {
+        "title": "Osobisty charakter",
+        "description": "Żadne dwa zestawy prezentowe nie powinny być takie same. Twój jest wyjątkowy."
+      },
+      "joy": {
+        "title": "Szerzenie radości",
+        "description": "Naszym najważniejszym celem jest wywołanie uśmiechu na czyjejś twarzy."
+      }
+    },
+    "stats": {
+      "boxesCreated": "50 000+",
+      "boxesLabel": "Stworzonych zestawów",
+      "happyRecipients": "48 000+",
+      "recipientsLabel": "Zadowolonych odbiorców",
+      "countries": "25+",
+      "countriesLabel": "Krajów",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Wskaźnik satysfakcji"
+    },
+    "team": {
+      "title": "Poznaj zespół",
+      "subtitle": "Pasjonaci stojący za każdym zestawem"
+    }
+  },
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o Prezio",
+    "items": [
+      {
+        "question": "Jak działa Kreator zestawów prezentowych?",
+        "answer": "Nasz kreator krok po kroku przeprowadzi Cię przez wybór okazji, dobór produktów, personalizację opakowania, napisanie osobistej wiadomości i podgląd zestawu — wszystko w pięknym, intuicyjnym interfejsie."
+      },
+      {
+        "question": "Czy to prawdziwa platforma e-commerce?",
+        "answer": "Prezio jest obecnie prezentacją projektową i wersją demonstracyjną. Kreator jest w pełni funkcjonalny do projektowania zestawów, ale nie są przetwarzane żadne płatności ani przesyłki. Potraktuj to jako zapowiedź tego, co jest możliwe!"
+      },
+      {
+        "question": "Czy mogę zapisać swoje projekty?",
+        "answer": "Tak! Możesz zapisywać projekty zestawów prezentowych w pamięci lokalnej przeglądarki. Odwiedź stronę \"Moje projekty\", aby zarządzać, zmieniać nazwy, duplikować lub usuwać zapisane kreacje."
+      },
+      {
+        "question": "Jakie okazje obsługujecie?",
+        "answer": "Obsługujemy szeroki zakres okazji, w tym urodziny, rocznice, Walentynki, Boże Narodzenie, Halloween, zakończenie szkoły, narodziny dziecka, podziękowania, życzenia powrotu do zdrowia, śluby, parapetówki i prezenty \"po prostu tak\"."
+      },
+      {
+        "question": "Czy mogę dostosować opakowanie?",
+        "answer": "Oczywiście! Do wyboru masz trzy rozmiary pudełek (Małe, Średnie, Duże), trzy style opakowań (Klasyczny, Luksusowy, Ekologiczny) oraz wiele motywów kolorystycznych i wzorów."
+      },
+      {
+        "question": "Czy oferujecie opcje ekologiczne?",
+        "answer": "Tak! Nasz pakiet Ekologiczny wykorzystuje w 100% materiały z recyklingu i zrównoważone źródła. Jest naturalnie piękny i przyjazny dla planety."
+      },
+      {
+        "question": "Czy jest minimalna wartość zamówienia?",
+        "answer": "Nasz pakiet Starter zaczyna się od $25 za zestaw, który obejmuje pudełko, do 3 produktów i klasyczne opakowanie. Poza wyborem pakietu nie ma żadnego minimum."
+      },
+      {
+        "question": "Czy mogę dołączyć osobistą wiadomość?",
+        "answer": "Oczywiście! Na etapie kartki z życzeniami możesz napisać własną wiadomość z gotowymi tonami (serdeczny, zabawny, oficjalny, romantyczny, swobodny) lub skomponować własny tekst. Hojny limit to 500 znaków."
+      },
+      {
+        "question": "Czy strona jest dostępna w innych językach?",
+        "answer": "Prezio jest dostępne po angielsku, turecku i polsku. Możesz zmienić język w dowolnym momencie, korzystając z selektora języka w nagłówku strony."
+      },
+      {
+        "question": "Jak mogę udostępnić swój projekt komuś innemu?",
+        "answer": "Obecnie projekty są zapisywane lokalnie w Twojej przeglądarce. Funkcja udostępniania przez link lub media społecznościowe jest planowana w przyszłej aktualizacji."
+      }
+    ],
+    "stillHaveQuestions": "Nadal masz pytania?",
+    "contactUs": "Skontaktuj się z nami, a chętnie pomożemy."
+  },
+  "contact": {
+    "title": "Skontaktuj się z nami",
+    "subtitle": "Chętnie Cię wysłuchamy. Napisz do nas, a odezwiemy się wkrótce.",
+    "form": {
+      "name": "Twoje imię",
+      "namePlaceholder": "Jan Kowalski",
+      "email": "Adres e-mail",
+      "emailPlaceholder": "jan@example.com",
+      "subject": "Temat",
+      "subjectPlaceholder": "O co chodzi?",
+      "message": "Wiadomość",
+      "messagePlaceholder": "Powiedz nam, co masz na myśli...",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Wiadomość wysłana! (Demo — żaden e-mail nie został faktycznie wysłany)",
+      "error": "Coś poszło nie tak. Spróbuj ponownie."
+    },
+    "info": {
+      "email": "hello@prezio.app",
+      "phone": "",
+      "address": "Warszawa, Polska",
+      "hours": "Poniedziałek–Piątek, 9:00–18:00 CET"
+    },
+    "validation": {
+      "nameRequired": "Imię jest wymagane",
+      "emailRequired": "Adres e-mail jest wymagany",
+      "emailInvalid": "Podaj prawidłowy adres e-mail",
+      "subjectRequired": "Temat jest wymagany",
+      "messageRequired": "Wiadomość jest wymagana",
+      "messageTooShort": "Wiadomość musi mieć co najmniej 10 znaków"
+    }
+  },
+  "profile": {
+    "title": "Moje projekty",
+    "subtitle": "Zarządzaj zapisanymi projektami zestawów prezentowych",
+    "noDesigns": "Nie masz jeszcze żadnych zapisanych projektów.",
+    "startBuilding": "Zacznij tworzyć",
+    "savedOn": "Zapisano {{date}}",
+    "actions": {
+      "rename": "Zmień nazwę",
+      "duplicate": "Duplikuj",
+      "delete": "Usuń",
+      "edit": "Kontynuuj edycję",
+      "preview": "Podgląd"
+    },
+    "deleteConfirm": {
+      "title": "Usunąć projekt?",
+      "message": "Czy na pewno chcesz usunąć \"{{name}}\"? Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj"
+    },
+    "renameDialog": {
+      "title": "Zmień nazwę projektu",
+      "placeholder": "Wpisz nową nazwę",
+      "confirm": "Zapisz",
+      "cancel": "Anuluj"
+    },
+    "preferences": {
+      "title": "Preferencje",
+      "theme": "Motyw",
+      "language": "Język"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Polityka prywatności",
+      "lastUpdated": "Ostatnia aktualizacja: luty 2026",
+      "content": "Prezio jest aplikacją demonstracyjną. Niniejsza polityka prywatności została zamieszczona dla kompletności.\n\n**Zbierane informacje**\nTa aplikacja demonstracyjna przechowuje wyłącznie Twoje preferencje (motyw, język) oraz zapisane projekty zestawów prezentowych w pamięci lokalnej przeglądarki. Żadne dane osobowe nie są przesyłane na żaden serwer.\n\n**Pliki cookie i pamięć lokalna**\nWykorzystujemy pamięć lokalną przeglądarki do zapisywania preferencji motywu, wyboru języka i zapisanych projektów. Nie stosujemy śledzących plików cookie.\n\n**Usługi zewnętrzne**\nTa strona może korzystać z Google Fonts do typografii. Żadne usługi analityczne ani śledzące nie są aktywne.\n\n**Przechowywanie danych**\nWszystkie dane są przechowywane lokalnie na Twoim urządzeniu. Możesz je usunąć w dowolnym momencie za pomocą ustawień przeglądarki.\n\n**Kontakt**\nW razie pytań dotyczących niniejszej polityki prosimy o skorzystanie z naszego formularza kontaktowego."
+    },
+    "terms": {
+      "title": "Regulamin",
+      "lastUpdated": "Ostatnia aktualizacja: luty 2026",
+      "content": "Prezio jest projektem demonstracyjnym i portfoliowym. Niniejszy regulamin ma charakter poglądowy.\n\n**Akceptacja**\nKorzystając z Prezio, akceptujesz niniejszy regulamin.\n\n**Opis usługi**\nPrezio jest frontendową demonstracją doświadczenia tworzenia zestawów prezentowych. Żadne prawdziwe produkty nie są sprzedawane, żadne płatności nie są przetwarzane i żadne dostawy nie są realizowane.\n\n**Własność intelektualna**\nProjekt, kod i treść tej strony zostały stworzone w celach demonstracyjnych.\n\n**Ograniczenie odpowiedzialności**\nJest to niekomercyjna wersja demonstracyjna. Nie udziela się żadnych gwarancji dotyczących usługi.\n\n**Zmiany**\nNiniejszy regulamin może zostać zaktualizowany w dowolnym momencie bez uprzedzenia.\n\n**Kontakt**\nW razie pytań prosimy o skorzystanie z naszego formularza kontaktowego."
+    }
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "subtitle": "Ups! Wygląda na to, że ten prezent zgubił się w dostawie.",
+    "description": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "backHome": "Wróć na stronę główną",
+    "browseGifts": "Przeglądaj prezenty"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Coś poszło nie tak",
+    "retry": "Spróbuj ponownie",
+    "close": "Zamknij",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "search": "Szukaj",
+    "learnMore": "Dowiedz się więcej",
+    "viewAll": "Zobacz wszystko",
+    "back": "Wstecz",
+    "forward": "Dalej",
+    "from": "Od",
+    "scrollToTop": "Przewiń do góry"
+  }
+}
