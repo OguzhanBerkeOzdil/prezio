@@ -1,0 +1,63 @@
+import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
+import { SITE_NAME, SITE_URL } from '@/lib/constants'
+
+interface SEOProps {
+  title?: string
+  description?: string
+  path?: string
+  image?: string
+  type?: string
+}
+
+export function SEO({ title, description, path = '', image, type = 'website' }: SEOProps) {
+  const { t } = useTranslation()
+  
+  const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — ${t('site.tagline')}`
+  const pageDescription = description || t('site.description')
+  const pageUrl = `${SITE_URL}${path}`
+  const pageImage = image || `${SITE_URL}/social-card.png`
+
+  return (
+    <Helmet>
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDescription} />
+      <link rel="canonical" href={pageUrl} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={pageImage} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:description" content={pageDescription} />
+      <meta name="twitter:image" content={pageImage} />
+      
+      {/* JSON-LD */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': type === 'product' ? 'Product' : 'Organization',
+          name: SITE_NAME,
+          description: pageDescription,
+          url: pageUrl,
+          ...(type === 'product' ? {
+            offers: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '25',
+              highPrice: '90',
+            }
+          } : {
+            logo: pageImage,
+          }),
+        })}
+      </script>
+    </Helmet>
+  )
+}

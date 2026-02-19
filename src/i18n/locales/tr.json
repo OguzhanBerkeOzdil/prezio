@@ -1,0 +1,672 @@
+{
+  "site": {
+    "name": "GiftBox Studio",
+    "tagline": "Her Özel An İçin Mükemmel Hediye Kutusu",
+    "description": "Özenle seçilmiş ürünler, zarif ambalajlar ve içten mesajlarla kişiye özel hediye kutuları tasarlayın. Her anı unutulmaz kılın."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "builder": "Kutu Oluştur",
+    "catalog": "Katalog",
+    "pricing": "Fiyatlandırma",
+    "about": "Hakkımızda",
+    "faq": "SSS",
+    "contact": "İletişim",
+    "profile": "Tasarımlarım",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "language": "Dil",
+    "theme": "Tema",
+    "lightMode": "Açık Mod",
+    "darkMode": "Koyu Mod"
+  },
+  "hero": {
+    "badge": "Sevgiyle El Yapımı",
+    "title": "Hikayenizi Anlatan Hediye Kutuları Yaratın",
+    "subtitle": "Mükemmel ürünleri seçmekten kalbi dokunacak bir mesaj yazmaya kadar — stüdyomuz hediye vermeyi bir sanat formuna dönüştürüyor. Her kutu bir şaheser.",
+    "cta": "Oluşturmaya Başla",
+    "secondaryCta": "Kataloğa Göz At",
+    "trustedBy": "Dünya genelinde binlerce hediye sever tarafından tercih ediliyor"
+  },
+  "features": {
+    "sectionTitle": "Neden GiftBox Studio?",
+    "sectionSubtitle": "Unutulmaz hediyeler yaratmak için ihtiyacınız olan her şey",
+    "curated": {
+      "title": "Özenle Seçilmiş Koleksiyonlar",
+      "description": "Premium markalardan, özel gün ve tarza göre düzenlenmiş el yapımı ürünler."
+    },
+    "personalized": {
+      "title": "Tamamen Kişiselleştirilmiş",
+      "description": "Kutunuzu, ürünleri, ambalajı, kartı ve mesajı — en ince detayına kadar seçin."
+    },
+    "delivery": {
+      "title": "Zarif Teslimat",
+      "description": "Çevre dostu seçeneklerle premium ambalaj. Etkilemeye hazır bir şekilde ulaşır."
+    },
+    "occasions": {
+      "title": "Her Özel Gün",
+      "description": "Doğum günleri, düğünler, bayramlar, teşekkürler ve daha fazlası — sizi düşündük."
+    },
+    "budget": {
+      "title": "Her Bütçeye Uygun",
+      "description": "Düşünceli başlangıç kutularından lüks deluxe paketlere kadar."
+    },
+    "fast": {
+      "title": "Hızlı ve Kolay",
+      "description": "Rehberli oluşturucumuz sizi fikirden bitmiş kutuya dakikalar içinde taşır."
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "Nasıl Çalışır",
+    "sectionSubtitle": "Mükemmel hediye için üç basit adım",
+    "step1": {
+      "title": "Özel Günü Seçin",
+      "description": "Kimin için ve neyi kutladığınızı söyleyin. Size özel öneriler sunalım."
+    },
+    "step2": {
+      "title": "Kutunuzu Oluşturun",
+      "description": "Ürünleri seçin, ambalajı özelleştirin, mesajınızı yazın ve her şeyi önizleyin."
+    },
+    "step3": {
+      "title": "Mutluluğu Gönderin",
+      "description": "Siparişinizi tamamlayın ve sihrin gerçekleşmesini izleyin. Bu kadar basit."
+    }
+  },
+  "testimonials": {
+    "sectionTitle": "Hediye Severler Tarafından Seviliyor",
+    "sectionSubtitle": "Topluluğumuz ne diyor bir bakın",
+    "items": [
+      {
+        "name": "Ayşe M.",
+        "role": "Doğum Günü Tutkunu",
+        "text": "En yakın arkadaşıma özel bir doğum günü kutusu gönderdim ve kelimenin tam anlamıyla ağladı. Sunum muhteşemdi ve her ürün çok düşünceli hissettirdi.",
+        "rating": 5
+      },
+      {
+        "name": "Mehmet K.",
+        "role": "Kurumsal Hediye",
+        "text": "Tüm müşteri takdir hediyelerimiz için GiftBox Studio kullanıyoruz. Kalite tutarlı ve özelleştirme seçenekleri inanılmaz.",
+        "rating": 5
+      },
+      {
+        "name": "Elif Y.",
+        "role": "Düğün Organizatörü",
+        "text": "Oluşturduğum nedime kutuları büyük beğeni topladı. Herkes detaylara gösterilen özeni ve zarif ambalajı çok sevdi.",
+        "rating": 5
+      },
+      {
+        "name": "Burak L.",
+        "role": "İlk Kez Kullanan",
+        "text": "Hediye seçmekte berbat olan biri olarak bu uygulama hayat kurtarıcıydı. Öneriler tam isabetle ve süreç zahmetsizdi.",
+        "rating": 5
+      }
+    ]
+  },
+  "pricingPreview": {
+    "sectionTitle": "Basit, Şeffaf Fiyatlandırma",
+    "sectionSubtitle": "Hediyeniz için mükemmel paketi seçin",
+    "starter": {
+      "name": "Başlangıç",
+      "price": "₺750",
+      "period": "kutu başı",
+      "description": "Düşünceli, kişisel bir dokunuş için mükemmel",
+      "features": [
+        "Küçük hediye kutusu",
+        "3 ürüne kadar",
+        "Klasik ambalaj",
+        "Standart kart",
+        "Ücretsiz dijital önizleme"
+      ]
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "₺1.500",
+      "period": "kutu başı",
+      "description": "Özel günler için en popüler seçimimiz",
+      "badge": "En Popüler",
+      "features": [
+        "Orta boy hediye kutusu",
+        "6 ürüne kadar",
+        "Lüks ambalaj",
+        "Premium kart ve zarf",
+        "Hediye paketi dahil",
+        "Öncelikli işlem"
+      ]
+    },
+    "deluxe": {
+      "name": "Deluxe",
+      "price": "₺2.700",
+      "period": "kutu başı",
+      "description": "Ödünsüz nihai hediye deneyimi",
+      "features": [
+        "Büyük hediye kutusu",
+        "10 ürüne kadar",
+        "Kurdelalı lüks ambalaj",
+        "El yazısı tarzı kart",
+        "Premium hediye paketi",
+        "Hızlı teslimat",
+        "Fotoğraflı mesaj eklentisi"
+      ]
+    },
+    "cta": "Başlayın",
+    "viewAll": "Tüm Fiyatlandırma Detaylarını Gör"
+  },
+  "cta": {
+    "title": "Özel Bir Şey Yaratmaya Hazır Mısınız?",
+    "subtitle": "Mükemmel hediye kutunuzu bugün oluşturmaya başlayın. Asla unutmayacakları bir hediye tasarlamak sadece birkaç dakika sürer.",
+    "button": "Şimdi Oluşturmaya Başla",
+    "noCreditCard": "Hesap gerekmez • Tasarımları yerel olarak kaydedin"
+  },
+  "footer": {
+    "description": "Her seferinde bir kutu olmak üzere unutulmaz hediye deneyimleri yaratıyoruz. Her özel gün için kişiselleştirilmiş hediye kutuları tasarlayın.",
+    "product": "Ürün",
+    "company": "Şirket",
+    "legal": "Yasal",
+    "social": "Bizi Takip Edin",
+    "copyright": "© 2026 GiftBox Studio. Tüm hakları saklıdır.",
+    "madeWith": "Hediye severler için ❤️ ile yapıldı"
+  },
+  "catalog": {
+    "title": "Hediye Kataloğu",
+    "subtitle": "Özenle seçilmiş premium hediye koleksiyonumuzu keşfedin",
+    "searchPlaceholder": "Ürün ara...",
+    "allCategories": "Tüm Kategoriler",
+    "noResults": "Ürün bulunamadı. Filtrelerinizi düzenlemeyi deneyin.",
+    "addToBox": "Kutuya Ekle",
+    "viewDetails": "Detayları Gör",
+    "recommended": "Önerilen",
+    "popular": "Popüler",
+    "new": "Yeni",
+    "filters": "Filtreler",
+    "sortBy": "Sırala",
+    "priceRange": "Fiyat Aralığı",
+    "category": "Kategori",
+    "clearFilters": "Filtreleri Temizle",
+    "showing": "{{count}} ürün gösteriliyor",
+    "sortOptions": {
+      "featured": "Öne Çıkan",
+      "priceLow": "Fiyat: Düşükten Yükseğe",
+      "priceHigh": "Fiyat: Yüksekten Düşüğe",
+      "nameAz": "İsim: A'dan Z'ye",
+      "newest": "En Yeniler"
+    },
+    "categories": {
+      "all": "Tümü",
+      "chocolates": "Çikolata ve Tatlılar",
+      "candles": "Mumlar ve Kokular",
+      "accessories": "Aksesuarlar",
+      "wellness": "Sağlık ve Spa",
+      "drinks": "İçecekler",
+      "stationery": "Kırtasiye ve Kitaplar",
+      "tech": "Teknoloji",
+      "home": "Ev ve Dekorasyon"
+    }
+  },
+  "builder": {
+    "title": "Hediye Kutusu Oluşturucu",
+    "subtitle": "Birkaç adımda mükemmel hediyenizi tasarlayın",
+    "next": "Sonraki Adım",
+    "previous": "Önceki",
+    "finish": "Siparişi Tamamla",
+    "saveDesign": "Tasarımı Kaydet",
+    "loadDesign": "Tasarım Yükle",
+    "resetBuilder": "Baştan Başla",
+    "summary": "Sipariş Özeti",
+    "totalPrice": "Toplam",
+    "steps": {
+      "occasion": {
+        "title": "Özel Gün",
+        "subtitle": "Neyi kutluyorsunuz?",
+        "description": "Hediye kutunuz için özel günü seçin. Bu, mükemmel ürün ve temaları önermemize yardımcı olur.",
+        "options": {
+          "birthday": "Doğum Günü",
+          "anniversary": "Yıl Dönümü",
+          "valentine": "Sevgililer Günü",
+          "christmas": "Noel",
+          "halloween": "Cadılar Bayramı",
+          "graduation": "Mezuniyet",
+          "newBaby": "Yeni Bebek",
+          "thankYou": "Teşekkür",
+          "getWell": "Geçmiş Olsun",
+          "wedding": "Düğün",
+          "housewarming": "Ev Hediyesi",
+          "justBecause": "Öylesine"
+        }
+      },
+      "recipient": {
+        "title": "Alıcı",
+        "subtitle": "Şanslı kişi kim?",
+        "description": "Önerilerimizi kişiselleştirebilmemiz için alıcı hakkında bilgi verin.",
+        "relationship": "İlişki",
+        "relationships": {
+          "partner": "Eş / Partner",
+          "friend": "Arkadaş",
+          "parent": "Anne / Baba",
+          "sibling": "Kardeş",
+          "colleague": "İş Arkadaşı",
+          "child": "Çocuk",
+          "teacher": "Öğretmen / Mentor",
+          "other": "Diğer"
+        },
+        "interests": "İlgi Alanları",
+        "interestTags": {
+          "foodie": "Gurme",
+          "fitness": "Spor",
+          "bookworm": "Kitap Kurdu",
+          "techLover": "Teknoloji Sever",
+          "artist": "Sanatçı / Yaratıcı",
+          "natureLover": "Doğa Sever",
+          "fashionista": "Moda Tutkunu",
+          "gamer": "Oyuncu",
+          "traveler": "Gezgin",
+          "musician": "Müzik Sever"
+        },
+        "name": "Alıcının Adı (isteğe bağlı)",
+        "namePlaceholder": "Adını girin"
+      },
+      "budget": {
+        "title": "Bütçe",
+        "subtitle": "Harcama aralığınızı belirleyin",
+        "description": "Kaydırıcıyı sürükleyin veya bir paket seçin. Bütçenize uygun ürünler önereceğiz.",
+        "custom": "Özel Tutar",
+        "presets": {
+          "budget": "Ekonomik",
+          "standard": "Standart",
+          "premium": "Premium",
+          "luxury": "Lüks"
+        }
+      },
+      "packaging": {
+        "title": "Ambalaj",
+        "subtitle": "Kutu ve ambalajınızı seçin",
+        "description": "Hediyenize en uygun kutu boyutu ve ambalaj stilini seçin.",
+        "boxSize": "Kutu Boyutu",
+        "sizes": {
+          "S": {
+            "label": "Küçük",
+            "description": "Birkaç özel ürün için mükemmel",
+            "items": "3 ürüne kadar"
+          },
+          "M": {
+            "label": "Orta",
+            "description": "En popüler boyutumuz",
+            "items": "6 ürüne kadar"
+          },
+          "L": {
+            "label": "Büyük",
+            "description": "Büyük jestler için",
+            "items": "10 ürüne kadar"
+          }
+        },
+        "style": "Ambalaj Stili",
+        "styles": {
+          "classic": {
+            "label": "Klasik",
+            "description": "Temiz, zarif kraft kağıt bitiş"
+          },
+          "luxury": {
+            "label": "Lüks",
+            "description": "Premium saten kurdele ve metalik detaylar"
+          },
+          "eco": {
+            "label": "Çevre Dostu",
+            "description": "%100 geri dönüştürülmüş malzemeler, doğal güzellik"
+          }
+        }
+      },
+      "theme": {
+        "title": "Tema",
+        "subtitle": "Ambiyansı belirleyin",
+        "description": "Hediye kutunuz için bir renk paleti ve desen seçin.",
+        "colorPalette": "Renk Paleti",
+        "pattern": "Desen",
+        "palettes": {
+          "rose": "Gül Altın",
+          "ocean": "Okyanus Mavisi",
+          "forest": "Orman Yeşili",
+          "sunset": "Gün Batımı",
+          "midnight": "Gece Moru",
+          "minimal": "Minimal Beyaz",
+          "festive": "Şenlik Kırmızısı",
+          "pastel": "Yumuşak Pastel"
+        },
+        "patterns": {
+          "none": "Yok (Düz)",
+          "dots": "Puantiye",
+          "stripes": "Çizgili",
+          "floral": "Çiçekli",
+          "geometric": "Geometrik",
+          "stars": "Yıldızlar"
+        }
+      },
+      "items": {
+        "title": "Ürün Seçimi",
+        "subtitle": "Kutunuzu neşeyle doldurun",
+        "description": "Hediye kutunuza ürün eklemek için göz atın. Seçimlerinize göre önerileri vurguladık.",
+        "search": "Ürün ara...",
+        "added": "Eklendi",
+        "add": "Ekle",
+        "remove": "Çıkar",
+        "itemsSelected": "{{count}} ürün seçildi",
+        "maxItems": "Bu kutu boyutu için maksimum {{max}} ürün",
+        "boxFull": "Kutunuz dolu! Daha fazla ürün için daha büyük bir boyuta geçin."
+      },
+      "card": {
+        "title": "Hediye Kartı",
+        "subtitle": "Kalbinizden yazın",
+        "description": "Hediyenize kişisel bir mesaj ekleyin. Bir ton seçin veya kendiniz yazın.",
+        "message": "Mesajınız",
+        "messagePlaceholder": "İçten bir mesaj yazın...",
+        "characters": "{{count}}/{{max}} karakter",
+        "tones": {
+          "heartfelt": "İçten",
+          "funny": "Eğlenceli",
+          "formal": "Resmi",
+          "romantic": "Romantik",
+          "casual": "Samimi"
+        },
+        "tonePresets": {
+          "heartfelt": "Dünyadaki tüm mutluluğu diliyorum sana. Her güzel şeyi hak ediyorsun. Sevgi ve sıcaklıkla.",
+          "funny": "Paranın mutluluk satın alamayacağını söylüyorlar ama bu hediye kutusunu satın alabildi ve bu oldukça yakın! Keyfini çıkar! 🎉",
+          "formal": "Lütfen bu hediyeyi bir takdir ifadesi olarak kabul edin. Varlığınız ve katkılarınız gerçekten çok değerli.",
+          "romantic": "Seninle geçirdiğim her an bir hediye. Bu kutu, benim için ne kadar önemli olduğunun küçük bir hatırlatıcısı. Sonsuza dek senin.",
+          "casual": "Selam! Seni hatırlatan bazı şeyler gördüm. Umarım yüzünde bir gülümseme yaratır. Keyfini çıkar!"
+        },
+        "addCard": "Hediye kartı ekle (+₺90)",
+        "includeCard": "Hediye Kartı Ekle"
+      },
+      "preview": {
+        "title": "Önizleme",
+        "subtitle": "Eseriniz sizi bekliyor",
+        "description": "Sipariş vermeden önce hediye kutunuzu gözden geçirin. Her şey mükemmel görünüyor mu?",
+        "occasion": "Özel Gün",
+        "recipient": "Alıcı",
+        "packaging": "Ambalaj",
+        "theme": "Tema",
+        "items": "Ürünler",
+        "cardMessage": "Kart Mesajı",
+        "revealBox": "Kutunuzu Açın",
+        "editStep": "Düzenle",
+        "looksGreat": "Harika Görünüyor!"
+      },
+      "checkout": {
+        "title": "Ödeme",
+        "subtitle": "Neredeyse bitti!",
+        "description": "Hediye kutusu siparişinizi tamamlamak için teslimat detaylarını girin.",
+        "recipientName": "Alıcı Adı",
+        "address": "Teslimat Adresi",
+        "city": "Şehir",
+        "zipCode": "Posta Kodu",
+        "country": "Ülke",
+        "deliveryDate": "Tercih Edilen Teslimat Tarihi",
+        "notes": "Teslimat Notları (isteğe bağlı)",
+        "notesPlaceholder": "Özel talimatlar varsa...",
+        "placeOrder": "Sipariş Ver",
+        "demoNotice": "Bu bir demodur. Gerçek bir ücretlendirme yapılmayacaktır.",
+        "orderPlaced": "Sipariş Verildi!",
+        "orderMessage": "Hediye kutunuz oluşturuldu! Gerçek bir uygulamada bu işlenir ve gönderilirdi. GiftBox Studio'yu denediğiniz için teşekkürler!",
+        "backToHome": "Ana Sayfaya Dön",
+        "buildAnother": "Başka Bir Kutu Oluştur"
+      }
+    },
+    "pricing": {
+      "baseBox": "Temel Kutu",
+      "items": "Ürünler",
+      "packaging": "Ambalaj Ücreti",
+      "giftCard": "Hediye Kartı",
+      "subtotal": "Ara Toplam",
+      "total": "Toplam"
+    }
+  },
+  "pricing": {
+    "title": "Fiyatlandırma",
+    "subtitle": "Her bütçe için şeffaf fiyatlandırma",
+    "description": "Size uygun paketi seçin. Her kutu ücretsiz tasarım araçları ve dijital önizleme içerir.",
+    "monthly": "Aylık",
+    "annually": "Yıllık",
+    "perBox": "kutu başı",
+    "getStarted": "Başlayın",
+    "mostPopular": "En Popüler",
+    "features": "Neler Dahil",
+    "allPlansInclude": "Tüm Planlar İçerir",
+    "commonFeatures": [
+      "Ücretsiz online oluşturucu",
+      "Dijital kutu önizleme",
+      "Sınırsız tasarım kaydetme",
+      "İki dil desteği (EN/TR)",
+      "Hesap gerekmez"
+    ],
+    "tiers": {
+      "starter": {
+        "name": "Başlangıç",
+        "price": "₺750",
+        "description": "Düşünceli, kişisel hediyeler için",
+        "features": [
+          "Küçük kutu (3 ürüne kadar)",
+          "Klasik ambalaj",
+          "Standart hediye kartı",
+          "5 iş günü teslimat"
+        ]
+      },
+      "plus": {
+        "name": "Plus",
+        "price": "₺1.500",
+        "description": "En popüler seçimimiz",
+        "features": [
+          "Orta kutu (6 ürüne kadar)",
+          "Lüks veya Eko ambalaj",
+          "Premium kart ve zarf",
+          "Hediye paketi dahil",
+          "3 iş günü teslimat"
+        ]
+      },
+      "deluxe": {
+        "name": "Deluxe",
+        "price": "₺2.700",
+        "description": "Nihai hediye deneyimi",
+        "features": [
+          "Büyük kutu (10 ürüne kadar)",
+          "Premium lüks ambalaj",
+          "El yazısı tarzı kart",
+          "Premium hediye paketi",
+          "Ertesi gün ekspres teslimat",
+          "Fotoğraflı mesaj eklentisi"
+        ]
+      }
+    }
+  },
+  "about": {
+    "title": "GiftBox Studio Hakkında",
+    "subtitle": "Her hediyenin bir hikaye anlatması gerektiğine inanıyoruz",
+    "story": {
+      "title": "Hikayemiz",
+      "p1": "GiftBox Studio basit bir fikirden doğdu: hediye vermek stresli değil, keyifli olmalı. İnsanların sıklıkla doğru hediyeyi bulmakta zorlandığını, saatlerce online arama yaptığını ve yine de seçimlerinin bir gülümseme getirip getirmeyeceğinden emin olamadığını fark ettik.",
+      "p2": "Bu yüzden özel günü seçmekten içten bir mesaj yazmaya kadar sizi süreç boyunca yönlendiren bir platform oluşturduk. Kataloğumuzdaki her ürün kalite ve düşüncelilik açısından özenle seçilmiştir.",
+      "p3": "İster bir doğum gününü kutluyor olun, ister teşekkür ediyor olun, ister sadece birine önemsediğinizi bildirmek istiyor olun, GiftBox Studio gerçekten özel bir şey yaratmayı kolaylaştırır."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "text": "Kişiselleştirilmiş hediye vermeyi herkes için erişilebilir, keyifli ve anlamlı kılmak."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "quality": {
+        "title": "Önce Kalite",
+        "description": "Sunduğumuz her ürün katı kalite standartlarımızdan geçer."
+      },
+      "sustainability": {
+        "title": "Sürdürülebilirlik",
+        "description": "Çevre dostu ambalaj seçenekleri ve sorumlu kaynak kullanımı."
+      },
+      "personalization": {
+        "title": "Kişisel Dokunuş",
+        "description": "Hiçbir iki hediye kutusu aynı olmamalı. Sizinki benzersiz."
+      },
+      "joy": {
+        "title": "Neşe Yaymak",
+        "description": "Nihai amacımız birinin yüzüne gülümseme koymak."
+      }
+    },
+    "stats": {
+      "boxesCreated": "50.000+",
+      "boxesLabel": "Kutu Oluşturuldu",
+      "happyRecipients": "48.000+",
+      "recipientsLabel": "Mutlu Alıcı",
+      "countries": "25+",
+      "countriesLabel": "Ülke",
+      "satisfaction": "%99",
+      "satisfactionLabel": "Memnuniyet Oranı"
+    },
+    "team": {
+      "title": "Ekibimizle Tanışın",
+      "subtitle": "Her kutunun arkasındaki tutkulu insanlar"
+    }
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "GiftBox Studio hakkında bilmeniz gereken her şey",
+    "items": [
+      {
+        "question": "Hediye Kutusu Oluşturucu nasıl çalışır?",
+        "answer": "Adım adım oluşturucumuz sizi özel gün seçimi, ürün seçimi, ambalaj özelleştirme, kişisel mesaj yazma ve kutunuzu önizleme aşamalarında yönlendirir — hepsi güzel ve sezgisel bir arayüzde."
+      },
+      {
+        "question": "Bu gerçek bir e-ticaret platformu mu?",
+        "answer": "GiftBox Studio şu anda bir tasarım vitrini ve demodur. Oluşturucu kutu tasarlamak için tamamen işlevseldir, ancak gerçek ödeme veya gönderim yapılmaz. Bunu olası olanın bir önizlemesi olarak düşünün!"
+      },
+      {
+        "question": "Tasarımlarımı kaydedebilir miyim?",
+        "answer": "Evet! Hediye kutusu tasarımlarınızı tarayıcınızın yerel depolamasına kaydedebilirsiniz. Kayıtlı tasarımlarınızı yönetmek, yeniden adlandırmak, çoğaltmak veya silmek için 'Tasarımlarım' sayfasını ziyaret edin."
+      },
+      {
+        "question": "Hangi özel günleri destekliyorsunuz?",
+        "answer": "Doğum günleri, yıl dönümleri, Sevgililer Günü, Noel, Cadılar Bayramı, mezuniyet, yeni bebek, teşekkür, geçmiş olsun, düğünler, ev hediyesi ve 'öylesine' hediyeleri dahil geniş bir yelpazede özel günleri destekliyoruz."
+      },
+      {
+        "question": "Ambalajı özelleştirebilir miyim?",
+        "answer": "Kesinlikle! Üç kutu boyutu (Küçük, Orta, Büyük), üç ambalaj stili (Klasik, Lüks, Çevre Dostu) ve birden fazla renk teması ve desen arasından seçim yapabilirsiniz."
+      },
+      {
+        "question": "Çevre dostu seçenekler sunuyor musunuz?",
+        "answer": "Evet! Çevre Dostu ambalaj paketimiz %100 geri dönüştürülmüş ve sürdürülebilir malzemeler kullanır. Doğal olarak güzel ve gezegene dost."
+      },
+      {
+        "question": "Minimum sipariş tutarı var mı?",
+        "answer": "Başlangıç paketimiz kutu başı ₺750'den başlar, kutu, 3 ürüne kadar ve klasik ambalaj dahildir. Paket seçmenin ötesinde minimum yoktur."
+      },
+      {
+        "question": "Kişisel mesaj ekleyebilir miyim?",
+        "answer": "Tabii ki! Hediye kartı adımımız ton hazır ayarlarıyla (içten, eğlenceli, resmi, romantik, samimi) özel mesaj yazmanıza veya kendiniz oluşturmanıza olanak tanır. 500 karakter gibi cömert bir limit var."
+      },
+      {
+        "question": "Site başka dillerde mevcut mu?",
+        "answer": "Şu anda GiftBox Studio İngilizce ve Türkçe olarak mevcuttur. Dilleri istediğiniz zaman değiştirmek için üst kısımdaki dil değiştiriciyi kullanın."
+      },
+      {
+        "question": "Tasarımımı biriyle nasıl paylaşırım?",
+        "answer": "Şu anda tasarımlar tarayıcınızda yerel olarak kaydedilmektedir. Link veya sosyal medya üzerinden paylaşım özelliği gelecek bir güncelleme için planlanmaktadır."
+      }
+    ],
+    "stillHaveQuestions": "Hâlâ sorularınız mı var?",
+    "contactUs": "Bize ulaşın, yardımcı olmaktan mutluluk duyarız."
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Sizden haber almaktan mutluluk duyarız. Bize bir mesaj bırakın, en kısa sürede dönüş yapacağız.",
+    "form": {
+      "name": "Adınız",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "ahmet@ornek.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Ne hakkında?",
+      "message": "Mesaj",
+      "messagePlaceholder": "Aklınızdakileri bize anlatın...",
+      "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesaj gönderildi! (Demo — gerçek e-posta gönderilmedi)",
+      "error": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
+    },
+    "info": {
+      "email": "merhaba@giftboxstudio.com",
+      "phone": "+90 (212) 555 1234",
+      "address": "Hediye Sokak 123, Yaratıcı Mahalle, İstanbul",
+      "hours": "Pazartesi - Cuma, 09:00 - 18:00"
+    },
+    "validation": {
+      "nameRequired": "Ad gereklidir",
+      "emailRequired": "E-posta gereklidir",
+      "emailInvalid": "Lütfen geçerli bir e-posta girin",
+      "subjectRequired": "Konu gereklidir",
+      "messageRequired": "Mesaj gereklidir",
+      "messageTooShort": "Mesaj en az 10 karakter olmalıdır"
+    }
+  },
+  "profile": {
+    "title": "Tasarımlarım",
+    "subtitle": "Kayıtlı hediye kutusu tasarımlarınızı yönetin",
+    "noDesigns": "Henüz kayıtlı tasarımınız yok.",
+    "startBuilding": "Oluşturmaya Başla",
+    "savedOn": "{{date}} tarihinde kaydedildi",
+    "actions": {
+      "rename": "Yeniden Adlandır",
+      "duplicate": "Çoğalt",
+      "delete": "Sil",
+      "edit": "Düzenlemeye Devam Et",
+      "preview": "Önizle"
+    },
+    "deleteConfirm": {
+      "title": "Tasarım Silinsin mi?",
+      "message": "\"{{name}}\" tasarımını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal"
+    },
+    "renameDialog": {
+      "title": "Tasarımı Yeniden Adlandır",
+      "placeholder": "Yeni bir ad girin",
+      "confirm": "Kaydet",
+      "cancel": "İptal"
+    },
+    "preferences": {
+      "title": "Tercihler",
+      "theme": "Tema",
+      "language": "Dil"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Gizlilik Politikası",
+      "lastUpdated": "Son güncelleme: Şubat 2026",
+      "content": "GiftBox Studio bir demo uygulamadır. Bu gizlilik politikası bütünlük açısından sunulmuştur.\n\n**Topladığımız Bilgiler**\nBu demo uygulama yalnızca tercihlerinizi (tema, dil) ve kayıtlı hediye kutusu tasarımlarınızı tarayıcınızın yerel depolamasında saklar. Herhangi bir sunucuya kişisel veri gönderilmez.\n\n**Çerezler ve Yerel Depolama**\nTema tercihinizi, dil seçiminizi ve kayıtlı tasarımlarınızı saklamak için tarayıcı yerel depolamasını kullanıyoruz. İzleme çerezi kullanılmamaktadır.\n\n**Üçüncü Taraf Hizmetleri**\nBu site tipografi için Google Fonts kullanabilir. Analitik veya izleme hizmeti aktif değildir.\n\n**Veri Saklama**\nTüm veriler cihazınızda yerel olarak saklanır. Tarayıcı ayarlarınızdan istediğiniz zaman temizleyebilirsiniz.\n\n**İletişim**\nBu politika hakkında herhangi bir sorunuz için lütfen iletişim formumuzu kullanın."
+    },
+    "terms": {
+      "title": "Kullanım Koşulları",
+      "lastUpdated": "Son güncelleme: Şubat 2026",
+      "content": "GiftBox Studio bir demo ve portföy projesidir. Bu koşullar gösterim amaçlıdır.\n\n**Kabul**\nGiftBox Studio'ya erişerek bu koşulları kabul etmiş olursunuz.\n\n**Hizmet Açıklaması**\nGiftBox Studio, bir hediye kutusu oluşturma deneyiminin frontend demosudur. Gerçek ürün satılmaz, ödeme işlenmez ve teslimat yapılmaz.\n\n**Fikri Mülkiyet**\nBu sitenin tasarımı, kodu ve içeriği gösterim amaçlı oluşturulmuştur.\n\n**Sorumluluk Sınırlaması**\nBu ticari olmayan bir demodur. Hizmetle ilgili garanti veya taahhüt verilmemektedir.\n\n**Değişiklikler**\nBu koşullar herhangi bir zamanda bildirimde bulunulmaksızın güncellenebilir.\n\n**İletişim**\nSorularınız için lütfen iletişim formumuzu kullanın."
+    }
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "subtitle": "Oops! Görünüşe göre bu hediye teslimat sırasında kaybolmuş.",
+    "description": "Aradığınız sayfa mevcut değil veya taşınmış.",
+    "backHome": "Ana Sayfaya Dön",
+    "browseGifts": "Hediyelere Göz At"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir şeyler yanlış gitti",
+    "retry": "Tekrar Dene",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "search": "Ara",
+    "learnMore": "Daha Fazla",
+    "viewAll": "Tümünü Gör",
+    "back": "Geri",
+    "forward": "İleri",
+    "from": "Başlangıç",
+    "scrollToTop": "Yukarı kaydır"
+  }
+}

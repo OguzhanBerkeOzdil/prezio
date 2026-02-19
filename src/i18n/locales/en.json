@@ -1,0 +1,672 @@
+{
+  "site": {
+    "name": "GiftBox Studio",
+    "tagline": "Craft the Perfect Gift Box for Every Occasion",
+    "description": "Design personalized gift boxes with curated items, beautiful packaging, and heartfelt messages. Make every moment unforgettable."
+  },
+  "nav": {
+    "home": "Home",
+    "builder": "Build a Box",
+    "catalog": "Catalog",
+    "pricing": "Pricing",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "profile": "My Designs",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "language": "Language",
+    "theme": "Theme",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  },
+  "hero": {
+    "badge": "Handcrafted with Love",
+    "title": "Create Gift Boxes That Tell Your Story",
+    "subtitle": "From selecting the perfect items to crafting a heartfelt message, our studio makes gift-giving an art form. Every box is a masterpiece.",
+    "cta": "Start Building",
+    "secondaryCta": "Browse Catalog",
+    "trustedBy": "Trusted by thousands of gift-givers worldwide"
+  },
+  "features": {
+    "sectionTitle": "Why GiftBox Studio?",
+    "sectionSubtitle": "Everything you need to create unforgettable gifts",
+    "curated": {
+      "title": "Curated Collections",
+      "description": "Handpicked items from premium brands, organized by occasion and style."
+    },
+    "personalized": {
+      "title": "Fully Personalized",
+      "description": "Choose your box, items, wrapping, card, and message — down to the last detail."
+    },
+    "delivery": {
+      "title": "Beautiful Delivery",
+      "description": "Premium packaging with eco-friendly options. Arrives ready to impress."
+    },
+    "occasions": {
+      "title": "Every Occasion",
+      "description": "Birthdays, weddings, holidays, thank-yous, and more — we've got you covered."
+    },
+    "budget": {
+      "title": "Any Budget",
+      "description": "From thoughtful starter boxes to luxurious deluxe packages."
+    },
+    "fast": {
+      "title": "Quick & Easy",
+      "description": "Our guided builder takes you from idea to finished box in minutes."
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "How It Works",
+    "sectionSubtitle": "Three simple steps to the perfect gift",
+    "step1": {
+      "title": "Choose Your Occasion",
+      "description": "Tell us who it's for and what you're celebrating. We'll curate suggestions."
+    },
+    "step2": {
+      "title": "Build Your Box",
+      "description": "Pick items, customize packaging, write your message, and preview everything."
+    },
+    "step3": {
+      "title": "Send the Joy",
+      "description": "Complete your order and watch the magic unfold. It's that simple."
+    }
+  },
+  "testimonials": {
+    "sectionTitle": "Loved by Gift-Givers",
+    "sectionSubtitle": "See what our community has to say",
+    "items": [
+      {
+        "name": "Sarah M.",
+        "role": "Birthday Enthusiast",
+        "text": "I sent my best friend a custom birthday box and she literally cried. The presentation was stunning and every item felt so thoughtful.",
+        "rating": 5
+      },
+      {
+        "name": "James R.",
+        "role": "Corporate Gifting",
+        "text": "We use GiftBox Studio for all our client appreciation gifts. The quality is consistent and the customization options are incredible.",
+        "rating": 5
+      },
+      {
+        "name": "Emily K.",
+        "role": "Wedding Planner",
+        "text": "The bridal party boxes I created were a huge hit. Everyone loved the attention to detail and the beautiful packaging.",
+        "rating": 5
+      },
+      {
+        "name": "David L.",
+        "role": "First-Time User",
+        "text": "As someone who's terrible at gift-giving, this app was a lifesaver. The suggestions were spot-on and the process was effortless.",
+        "rating": 5
+      }
+    ]
+  },
+  "pricingPreview": {
+    "sectionTitle": "Simple, Transparent Pricing",
+    "sectionSubtitle": "Choose the perfect tier for your gift",
+    "starter": {
+      "name": "Starter",
+      "price": "$25",
+      "period": "per box",
+      "description": "Perfect for a thoughtful, personal touch",
+      "features": [
+        "Small gift box",
+        "Up to 3 items",
+        "Classic packaging",
+        "Standard card",
+        "Free digital preview"
+      ]
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$50",
+      "period": "per box",
+      "description": "Our most popular choice for special occasions",
+      "badge": "Most Popular",
+      "features": [
+        "Medium gift box",
+        "Up to 6 items",
+        "Luxury packaging",
+        "Premium card with envelope",
+        "Gift wrapping included",
+        "Priority handling"
+      ]
+    },
+    "deluxe": {
+      "name": "Deluxe",
+      "price": "$90",
+      "period": "per box",
+      "description": "The ultimate gift experience, no compromises",
+      "features": [
+        "Large gift box",
+        "Up to 10 items",
+        "Luxury packaging with ribbon",
+        "Handwritten-style card",
+        "Premium gift wrapping",
+        "Express delivery",
+        "Photo message add-on"
+      ]
+    },
+    "cta": "Get Started",
+    "viewAll": "View Full Pricing Details"
+  },
+  "cta": {
+    "title": "Ready to Create Something Special?",
+    "subtitle": "Start building your perfect gift box today. It only takes a few minutes to craft a gift they'll never forget.",
+    "button": "Start Building Now",
+    "noCreditCard": "No account required • Save designs locally"
+  },
+  "footer": {
+    "description": "Crafting memorable gift experiences, one box at a time. Design personalized gift boxes for every occasion.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "social": "Follow Us",
+    "copyright": "© 2026 GiftBox Studio. All rights reserved.",
+    "madeWith": "Made with ❤️ for gift lovers everywhere"
+  },
+  "catalog": {
+    "title": "Gift Catalog",
+    "subtitle": "Explore our curated collection of premium gift items",
+    "searchPlaceholder": "Search items...",
+    "allCategories": "All Categories",
+    "noResults": "No items found. Try adjusting your filters.",
+    "addToBox": "Add to Box",
+    "viewDetails": "View Details",
+    "recommended": "Recommended",
+    "popular": "Popular",
+    "new": "New",
+    "filters": "Filters",
+    "sortBy": "Sort by",
+    "priceRange": "Price Range",
+    "category": "Category",
+    "clearFilters": "Clear Filters",
+    "showing": "Showing {{count}} items",
+    "sortOptions": {
+      "featured": "Featured",
+      "priceLow": "Price: Low to High",
+      "priceHigh": "Price: High to Low",
+      "nameAz": "Name: A to Z",
+      "newest": "Newest First"
+    },
+    "categories": {
+      "all": "All",
+      "chocolates": "Chocolates & Sweets",
+      "candles": "Candles & Scents",
+      "accessories": "Accessories",
+      "wellness": "Wellness & Spa",
+      "drinks": "Drinks & Beverages",
+      "stationery": "Stationery & Books",
+      "tech": "Tech & Gadgets",
+      "home": "Home & Decor"
+    }
+  },
+  "builder": {
+    "title": "Gift Box Builder",
+    "subtitle": "Design your perfect gift in just a few steps",
+    "next": "Next Step",
+    "previous": "Previous",
+    "finish": "Complete Order",
+    "saveDesign": "Save Design",
+    "loadDesign": "Load Design",
+    "resetBuilder": "Start Over",
+    "summary": "Order Summary",
+    "totalPrice": "Total",
+    "steps": {
+      "occasion": {
+        "title": "Occasion",
+        "subtitle": "What's the celebration?",
+        "description": "Choose the occasion for your gift box. This helps us suggest the perfect items and themes.",
+        "options": {
+          "birthday": "Birthday",
+          "anniversary": "Anniversary",
+          "valentine": "Valentine's Day",
+          "christmas": "Christmas",
+          "halloween": "Halloween",
+          "graduation": "Graduation",
+          "newBaby": "New Baby",
+          "thankYou": "Thank You",
+          "getWell": "Get Well Soon",
+          "wedding": "Wedding",
+          "housewarming": "Housewarming",
+          "justBecause": "Just Because"
+        }
+      },
+      "recipient": {
+        "title": "Recipient",
+        "subtitle": "Who's the lucky one?",
+        "description": "Tell us about the recipient so we can tailor our suggestions.",
+        "relationship": "Relationship",
+        "relationships": {
+          "partner": "Partner / Spouse",
+          "friend": "Friend",
+          "parent": "Parent",
+          "sibling": "Sibling",
+          "colleague": "Colleague",
+          "child": "Child",
+          "teacher": "Teacher / Mentor",
+          "other": "Other"
+        },
+        "interests": "Their Interests",
+        "interestTags": {
+          "foodie": "Foodie",
+          "fitness": "Fitness",
+          "bookworm": "Bookworm",
+          "techLover": "Tech Lover",
+          "artist": "Creative / Artist",
+          "natureLover": "Nature Lover",
+          "fashionista": "Fashionista",
+          "gamer": "Gamer",
+          "traveler": "Traveler",
+          "musician": "Music Lover"
+        },
+        "name": "Recipient's Name (optional)",
+        "namePlaceholder": "Enter their name"
+      },
+      "budget": {
+        "title": "Budget",
+        "subtitle": "Set your spending range",
+        "description": "Drag the slider or choose a preset tier. We'll recommend items that fit.",
+        "custom": "Custom Amount",
+        "presets": {
+          "budget": "Budget-Friendly",
+          "standard": "Standard",
+          "premium": "Premium",
+          "luxury": "Luxury"
+        }
+      },
+      "packaging": {
+        "title": "Packaging",
+        "subtitle": "Choose your box and wrapping",
+        "description": "Select the box size and packaging style that best suits your gift.",
+        "boxSize": "Box Size",
+        "sizes": {
+          "S": {
+            "label": "Small",
+            "description": "Perfect for a few special items",
+            "items": "Up to 3 items"
+          },
+          "M": {
+            "label": "Medium",
+            "description": "Our most popular size",
+            "items": "Up to 6 items"
+          },
+          "L": {
+            "label": "Large",
+            "description": "For grand gestures",
+            "items": "Up to 10 items"
+          }
+        },
+        "style": "Packaging Style",
+        "styles": {
+          "classic": {
+            "label": "Classic",
+            "description": "Clean, elegant kraft paper finish"
+          },
+          "luxury": {
+            "label": "Luxury",
+            "description": "Premium satin ribbon and metallic accents"
+          },
+          "eco": {
+            "label": "Eco-Friendly",
+            "description": "100% recycled materials, naturally beautiful"
+          }
+        }
+      },
+      "theme": {
+        "title": "Theme",
+        "subtitle": "Set the mood",
+        "description": "Pick a color palette and pattern for your gift box.",
+        "colorPalette": "Color Palette",
+        "pattern": "Pattern",
+        "palettes": {
+          "rose": "Rose Gold",
+          "ocean": "Ocean Blue",
+          "forest": "Forest Green",
+          "sunset": "Sunset Warm",
+          "midnight": "Midnight Purple",
+          "minimal": "Minimal White",
+          "festive": "Festive Red",
+          "pastel": "Soft Pastel"
+        },
+        "patterns": {
+          "none": "None (Solid)",
+          "dots": "Polka Dots",
+          "stripes": "Stripes",
+          "floral": "Floral",
+          "geometric": "Geometric",
+          "stars": "Stars"
+        }
+      },
+      "items": {
+        "title": "Select Items",
+        "subtitle": "Fill your box with joy",
+        "description": "Browse and add items to your gift box. We've highlighted recommendations based on your selections.",
+        "search": "Search items...",
+        "added": "Added",
+        "add": "Add",
+        "remove": "Remove",
+        "itemsSelected": "{{count}} item(s) selected",
+        "maxItems": "Maximum {{max}} items for this box size",
+        "boxFull": "Your box is full! Upgrade to a larger size for more items."
+      },
+      "card": {
+        "title": "Gift Card",
+        "subtitle": "Write from the heart",
+        "description": "Add a personal message to your gift. Choose a tone or write your own.",
+        "message": "Your Message",
+        "messagePlaceholder": "Write a heartfelt message...",
+        "characters": "{{count}}/{{max}} characters",
+        "tones": {
+          "heartfelt": "Heartfelt",
+          "funny": "Funny",
+          "formal": "Formal",
+          "romantic": "Romantic",
+          "casual": "Casual"
+        },
+        "tonePresets": {
+          "heartfelt": "Wishing you all the happiness in the world. You deserve every beautiful thing that comes your way. With love and warmth.",
+          "funny": "They say money can't buy happiness, but it can buy this gift box, and that's pretty close! Enjoy! 🎉",
+          "formal": "Please accept this gift as a token of appreciation. Your presence and contributions are truly valued.",
+          "romantic": "Every moment with you is a gift. This box is just a small reminder of how much you mean to me. Forever yours.",
+          "casual": "Hey! Saw some things that reminded me of you. Hope this brings a smile to your face. Enjoy!"
+        },
+        "addCard": "Add a gift card (+$3)",
+        "includeCard": "Include Gift Card"
+      },
+      "preview": {
+        "title": "Preview",
+        "subtitle": "Your creation awaits",
+        "description": "Review your gift box before placing the order. Everything look perfect?",
+        "occasion": "Occasion",
+        "recipient": "Recipient",
+        "packaging": "Packaging",
+        "theme": "Theme",
+        "items": "Items",
+        "cardMessage": "Card Message",
+        "revealBox": "Reveal Your Box",
+        "editStep": "Edit",
+        "looksGreat": "Looks Great!"
+      },
+      "checkout": {
+        "title": "Checkout",
+        "subtitle": "Almost there!",
+        "description": "Enter delivery details to complete your gift box order.",
+        "recipientName": "Recipient Name",
+        "address": "Delivery Address",
+        "city": "City",
+        "zipCode": "ZIP Code",
+        "country": "Country",
+        "deliveryDate": "Preferred Delivery Date",
+        "notes": "Delivery Notes (optional)",
+        "notesPlaceholder": "Any special instructions...",
+        "placeOrder": "Place Order",
+        "demoNotice": "This is a demo. No real charges will be made.",
+        "orderPlaced": "Order Placed!",
+        "orderMessage": "Your gift box has been created! In a real app, this would be processed and shipped. Thanks for trying GiftBox Studio!",
+        "backToHome": "Back to Home",
+        "buildAnother": "Build Another Box"
+      }
+    },
+    "pricing": {
+      "baseBox": "Base Box",
+      "items": "Items",
+      "packaging": "Packaging Fee",
+      "giftCard": "Gift Card",
+      "subtotal": "Subtotal",
+      "total": "Total"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Transparent pricing for every budget",
+    "description": "Choose the tier that works for you. Every box includes free design tools and a digital preview.",
+    "monthly": "Monthly",
+    "annually": "Annually",
+    "perBox": "per box",
+    "getStarted": "Get Started",
+    "mostPopular": "Most Popular",
+    "features": "What's Included",
+    "allPlansInclude": "All Plans Include",
+    "commonFeatures": [
+      "Free online builder tool",
+      "Digital box preview",
+      "Save unlimited designs",
+      "Bilingual support (EN/TR)",
+      "No account required"
+    ],
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "price": "$25",
+        "description": "For thoughtful, personal gifts",
+        "features": [
+          "Small box (up to 3 items)",
+          "Classic packaging",
+          "Standard gift card",
+          "5 business day delivery"
+        ]
+      },
+      "plus": {
+        "name": "Plus",
+        "price": "$50",
+        "description": "Our most popular choice",
+        "features": [
+          "Medium box (up to 6 items)",
+          "Luxury or Eco packaging",
+          "Premium card with envelope",
+          "Gift wrapping included",
+          "3 business day delivery"
+        ]
+      },
+      "deluxe": {
+        "name": "Deluxe",
+        "price": "$90",
+        "description": "The ultimate gift experience",
+        "features": [
+          "Large box (up to 10 items)",
+          "Premium luxury packaging",
+          "Handwritten-style card",
+          "Premium gift wrapping",
+          "Express next-day delivery",
+          "Photo message add-on"
+        ]
+      }
+    }
+  },
+  "about": {
+    "title": "About GiftBox Studio",
+    "subtitle": "We believe every gift should tell a story",
+    "story": {
+      "title": "Our Story",
+      "p1": "GiftBox Studio was born from a simple idea: gift-giving should be joyful, not stressful. We noticed that people often struggle to find the right gift, spend hours searching online, and still end up unsure if their choice will bring a smile.",
+      "p2": "So we built a platform that guides you through the process — from choosing the occasion to crafting a heartfelt message. Every item in our catalog is handpicked for quality and thoughtfulness.",
+      "p3": "Whether you're celebrating a birthday, saying thank you, or just letting someone know you care, GiftBox Studio makes it easy to create something truly special."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To make personalized gifting accessible, delightful, and meaningful for everyone."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Quality First",
+        "description": "Every item we offer passes our strict quality standards."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Eco-friendly packaging options and responsible sourcing."
+      },
+      "personalization": {
+        "title": "Personal Touch",
+        "description": "No two gift boxes should be the same. Yours is unique."
+      },
+      "joy": {
+        "title": "Spreading Joy",
+        "description": "Our ultimate goal is to put a smile on someone's face."
+      }
+    },
+    "stats": {
+      "boxesCreated": "50,000+",
+      "boxesLabel": "Boxes Created",
+      "happyRecipients": "48,000+",
+      "recipientsLabel": "Happy Recipients",
+      "countries": "25+",
+      "countriesLabel": "Countries",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Satisfaction Rate"
+    },
+    "team": {
+      "title": "Meet the Team",
+      "subtitle": "Passionate people behind every box"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about GiftBox Studio",
+    "items": [
+      {
+        "question": "How does the Gift Box Builder work?",
+        "answer": "Our step-by-step builder guides you through choosing an occasion, selecting items, customizing packaging, writing a personal message, and previewing your box — all in a beautiful, intuitive interface."
+      },
+      {
+        "question": "Is this a real e-commerce platform?",
+        "answer": "GiftBox Studio is currently a design showcase and demo. The builder is fully functional for designing boxes, but no real payments or shipments are processed. Think of it as a preview of what's possible!"
+      },
+      {
+        "question": "Can I save my designs?",
+        "answer": "Yes! You can save your gift box designs to your browser's local storage. Visit the 'My Designs' page to manage, rename, duplicate, or delete your saved creations."
+      },
+      {
+        "question": "What occasions do you support?",
+        "answer": "We support a wide range of occasions including birthdays, anniversaries, Valentine's Day, Christmas, Halloween, graduation, new baby, thank you, get well, weddings, housewarming, and 'just because' gifts."
+      },
+      {
+        "question": "Can I customize the packaging?",
+        "answer": "Absolutely! Choose from three box sizes (Small, Medium, Large), three packaging styles (Classic, Luxury, Eco-Friendly), and multiple color themes and patterns."
+      },
+      {
+        "question": "Do you offer eco-friendly options?",
+        "answer": "Yes! Our Eco-Friendly packaging tier uses 100% recycled and sustainable materials. It's naturally beautiful and kind to the planet."
+      },
+      {
+        "question": "Is there a minimum order value?",
+        "answer": "Our Starter tier begins at $25 per box, which includes the box, up to 3 items, and classic packaging. There's no minimum beyond choosing a tier."
+      },
+      {
+        "question": "Can I include a personal message?",
+        "answer": "Of course! Our gift card step lets you write a custom message with tone presets (heartfelt, funny, formal, romantic, casual) or compose your own. Character limit is generous at 500 characters."
+      },
+      {
+        "question": "Is the site available in other languages?",
+        "answer": "Currently, GiftBox Studio is available in English and Turkish. Use the language switcher in the header to change languages at any time."
+      },
+      {
+        "question": "How do I share my design with someone?",
+        "answer": "Currently, designs are saved locally in your browser. A share feature via link or social media is planned for a future update."
+      }
+    ],
+    "stillHaveQuestions": "Still have questions?",
+    "contactUs": "Contact us and we'll be happy to help."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you. Drop us a message and we'll get back to you soon.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us what's on your mind...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent! (Demo — no actual email sent)",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "email": "hello@giftboxstudio.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Gift Lane, Creative District, CA 90210",
+      "hours": "Monday - Friday, 9 AM - 6 PM PST"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageTooShort": "Message must be at least 10 characters"
+    }
+  },
+  "profile": {
+    "title": "My Designs",
+    "subtitle": "Manage your saved gift box designs",
+    "noDesigns": "You haven't saved any designs yet.",
+    "startBuilding": "Start Building",
+    "savedOn": "Saved on {{date}}",
+    "actions": {
+      "rename": "Rename",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "edit": "Continue Editing",
+      "preview": "Preview"
+    },
+    "deleteConfirm": {
+      "title": "Delete Design?",
+      "message": "Are you sure you want to delete \"{{name}}\"? This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    },
+    "renameDialog": {
+      "title": "Rename Design",
+      "placeholder": "Enter a new name",
+      "confirm": "Save",
+      "cancel": "Cancel"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "theme": "Theme",
+      "language": "Language"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: February 2026",
+      "content": "GiftBox Studio is a demonstration application. This privacy policy is provided for completeness.\n\n**Information We Collect**\nThis demo application stores only your preferences (theme, language) and saved gift box designs in your browser's local storage. No personal data is sent to any server.\n\n**Cookies & Local Storage**\nWe use browser local storage to persist your theme preference, language selection, and saved designs. No tracking cookies are used.\n\n**Third-Party Services**\nThis site may use Google Fonts for typography. No analytics or tracking services are active.\n\n**Data Retention**\nAll data is stored locally on your device. You can clear it at any time through your browser settings.\n\n**Contact**\nFor any questions about this policy, please use our contact form."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: February 2026",
+      "content": "GiftBox Studio is a demonstration and portfolio project. These terms are for illustrative purposes.\n\n**Acceptance**\nBy accessing GiftBox Studio, you agree to these terms.\n\n**Service Description**\nGiftBox Studio is a frontend demonstration of a gift box building experience. No real products are sold, no payments are processed, and no deliveries are made.\n\n**Intellectual Property**\nThe design, code, and content of this site are created for demonstration purposes.\n\n**Limitation of Liability**\nThis is a non-commercial demo. No warranties or guarantees are made regarding the service.\n\n**Changes**\nThese terms may be updated at any time without notice.\n\n**Contact**\nFor questions, please use our contact form."
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "Oops! Looks like this gift got lost in delivery.",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home",
+    "browseGifts": "Browse Gifts"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "back": "Back",
+    "forward": "Next",
+    "from": "From",
+    "scrollToTop": "Scroll to top"
+  }
+}
