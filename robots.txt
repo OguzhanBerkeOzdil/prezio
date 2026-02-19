@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oguzhanberkeozdil.github.io/prezio/sitemap.xml
