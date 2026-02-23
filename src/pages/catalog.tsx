@@ -42,12 +42,12 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
 const SORT_OPTIONS: SortOption[] = ['featured', 'priceLow', 'priceHigh', 'nameAz', 'newest']
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 24, scale: 0.96 },
+  hidden: { opacity: 0, y: 16 },
   visible: (i: number) => ({
-    opacity: 1, y: 0, scale: 1,
-    transition: { delay: i * 0.05, duration: 0.4, ease: 'easeOut' as const },
+    opacity: 1, y: 0,
+    transition: { delay: Math.min(i * 0.03, 0.3), duration: 0.3, ease: 'easeOut' as const },
   }),
-  exit: { opacity: 0, scale: 0.95, transition: { duration: 0.2 } },
+  exit: { opacity: 0, transition: { duration: 0.15 } },
 }
 
 function sortItems(items: CatalogItem[], sort: SortOption): CatalogItem[] {
@@ -123,7 +123,7 @@ export default function CatalogPage() {
       <SEO title={t('catalog.title')} path={ROUTES.CATALOG} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b mesh-gradient">
+      <section className="relative overflow-hidden mesh-gradient">
         <div className="absolute inset-0 noise-bg" />
         <GradientOrb color="primary" size="lg" className="absolute -top-20 right-[10%] opacity-30" />
         <GradientOrb color="secondary" size="md" className="absolute -bottom-10 left-[5%] opacity-20" />
@@ -300,7 +300,7 @@ export default function CatalogPage() {
         <Separator className="mb-8" />
 
         {/* Items Grid / List */}
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           {filteredItems.length === 0 ? (
             <motion.div
               key="empty"
@@ -329,26 +329,26 @@ export default function CatalogPage() {
           ) : (
             <motion.div
               key="grid"
-              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               className={cn(
                 view === 'grid'
                   ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'
                   : 'flex flex-col gap-4'
               )}
             >
-              <AnimatePresence mode="popLayout">
-                {filteredItems.map((item, i) => (
-                  <CatalogCard
-                    key={item.id}
-                    item={item}
-                    index={i}
-                    view={view}
-                    isAdded={isItemAdded(item.id)}
-                    onAdd={() => handleAdd(item)}
-                    t={t}
-                  />
-                ))}
-              </AnimatePresence>
+              {filteredItems.map((item, i) => (
+                <CatalogCard
+                  key={item.id}
+                  item={item}
+                  index={i}
+                  view={view}
+                  isAdded={isItemAdded(item.id)}
+                  onAdd={() => handleAdd(item)}
+                  t={t}
+                />
+              ))}
             </motion.div>
           )}
         </AnimatePresence>
@@ -370,22 +370,19 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
   if (view === 'list') {
     return (
       <motion.div
-        layout
         custom={index}
         variants={cardVariants}
         initial="hidden"
         animate="visible"
-        exit="exit"
       >
         <Card variant="glass" className="group overflow-hidden transition-shadow hover:shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-4">
             <div className="flex items-center gap-4 flex-1 min-w-0">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 4 }}
+              <div
                 className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-primary/15 to-secondary/10"
               >
                 <ItemIcon name={item.icon} itemId={item.id} imgSize={48} className="h-7 w-7 sm:h-8 sm:w-8 text-primary" />
-              </motion.div>
+              </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
                   <h3 className="font-semibold truncate">{t(item.nameKey)}</h3>
@@ -408,7 +405,7 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
             </div>
             <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0">
               <span className="text-lg font-bold text-gradient">{formatPrice(item.price)}</span>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div>
                 <Button
                   size="sm"
                   variant={isAdded ? 'secondary' : 'default'}
@@ -419,7 +416,7 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
                   {isAdded ? <Check className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
                   {isAdded ? t('catalog.added') : t('catalog.addToBox')}
                 </Button>
-              </motion.div>
+              </div>
             </div>
           </div>
         </Card>
@@ -429,24 +426,20 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
 
   return (
     <motion.div
-      layout
       custom={index}
       variants={cardVariants}
       initial="hidden"
       animate="visible"
-      exit="exit"
     >
-      <motion.div whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
+      <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
         <Card variant="glass" className="group h-full overflow-hidden hover:shadow-xl hover:border-primary/20">
           <CardContent className="p-5">
             <div className="flex items-start justify-between mb-4">
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: 6 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                className="flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary/15 to-secondary/10 shadow-sm"
+              <div
+                className="flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary/15 to-secondary/10 shadow-sm group-hover:scale-110 transition-transform duration-200"
               >
                 <ItemIcon name={item.icon} itemId={item.id} imgSize={48} className="h-8 w-8 text-primary" />
-              </motion.div>
+              </div>
               <div className="flex gap-1.5">
                 {item.popular && (
                   <Badge variant="accent" className="text-xs glow-primary">
@@ -475,7 +468,7 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
 
             <div className="flex items-center justify-between">
               <span className="text-xl font-bold tracking-tight text-gradient">{formatPrice(item.price)}</span>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div>
                 <Button
                   size="sm"
                   variant={isAdded ? 'secondary' : 'default'}
@@ -495,7 +488,7 @@ function CatalogCard({ item, index, view, isAdded, onAdd, t }: CatalogCardProps)
                     </>
                   )}
                 </Button>
-              </motion.div>
+              </div>
             </div>
           </CardContent>
         </Card>

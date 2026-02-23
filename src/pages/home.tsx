@@ -217,8 +217,8 @@ function FeaturesSection() {
                     </div>
                   )}
                   <CardContent className={`relative z-10 ${idx === 0 ? 'p-8' : 'p-6'}`}>
-                    <div className={`mb-4 flex ${idx === 0 ? 'h-16 w-16' : 'h-14 w-14'} items-center justify-center rounded-2xl bg-linear-to-br ${color} group-hover:scale-110 transition-transform duration-300`}>
-                      <img src={img} alt="" className={`${idx === 0 ? 'h-10 w-10' : 'h-9 w-9'} object-contain drop-shadow-sm`} />
+                    <div className={`mb-4 flex ${idx === 0 ? 'h-16 w-16' : 'h-14 w-14'} items-center justify-center rounded-2xl bg-linear-to-br ${color} group-hover:scale-110 transition-transform duration-300 overflow-hidden`}>
+                      <img src={img} alt="" className={`${idx === 0 ? 'h-14 w-14' : 'h-12 w-12'} object-contain drop-shadow-md`} />
                     </div>
                     <h3 className={`${idx === 0 ? 'text-xl' : 'text-lg'} font-semibold mb-2 line-clamp-1`}>
                       {t(`features.${key}.title`)}
