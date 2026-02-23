@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
-  Gift, Palette, Truck, Heart, Sparkles, DollarSign, Zap,
-  Star, ChevronRight, ArrowRight, Package, Check, Target, Rocket,
+  Gift, Sparkles, Zap,
+  Star, ChevronRight, ArrowRight, Package, Check, Target, Rocket, Crown,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { cn } from '@/lib/utils'
 import { SEO } from '@/components/common/seo'
 import { PageTransition } from '@/components/common/page-transition'
 import { GradientOrb } from '@/components/common/gradient-orb'
@@ -21,6 +23,14 @@ import Magnet from '@/components/reactbits/magnet'
 import SpotlightCard from '@/components/reactbits/spotlight-card'
 import BlurText from '@/components/reactbits/blur-text'
 import heroGiftData from '@/assets/lottie/hero-gift.json'
+
+// ─── 3D Feature Icons ───────────────────────────────────────────────────────
+import iconCurated from '@/assets/icons3d/birthday-confetti.png'
+import iconPersonalized from '@/assets/icons3d/mobile-people.png'
+import iconDelivery from '@/assets/icons3d/delivery-truck.png'
+import iconOccasions from '@/assets/icons3d/wedding.png'
+import iconBudget from '@/assets/icons3d/piggy-bank.png'
+import iconFast from '@/assets/icons3d/sale-bomb.png'
 
 const Lottie = lazy(() => import('lottie-react'))
 
@@ -170,12 +180,12 @@ function FeaturesSection() {
   const { t } = useTranslation()
 
   const features = [
-    { icon: Package, key: 'curated', color: 'from-primary/20 to-primary/5', text: 'text-primary' },
-    { icon: Palette, key: 'personalized', color: 'from-secondary/20 to-secondary/5', text: 'text-secondary' },
-    { icon: Truck, key: 'delivery', color: 'from-accent/20 to-accent/5', text: 'text-accent' },
-    { icon: Heart, key: 'occasions', color: 'from-pink-500/20 to-pink-500/5', text: 'text-pink-500' },
-    { icon: DollarSign, key: 'budget', color: 'from-emerald-500/20 to-emerald-500/5', text: 'text-emerald-500' },
-    { icon: Zap, key: 'fast', color: 'from-amber-500/20 to-amber-500/5', text: 'text-amber-500' },
+    { img: iconCurated, key: 'curated', color: 'from-primary/20 to-primary/5' },
+    { img: iconPersonalized, key: 'personalized', color: 'from-secondary/20 to-secondary/5' },
+    { img: iconDelivery, key: 'delivery', color: 'from-accent/20 to-accent/5' },
+    { img: iconOccasions, key: 'occasions', color: 'from-pink-500/20 to-pink-500/5' },
+    { img: iconBudget, key: 'budget', color: 'from-emerald-500/20 to-emerald-500/5' },
+    { img: iconFast, key: 'fast', color: 'from-amber-500/20 to-amber-500/5' },
   ]
 
   return (
@@ -193,7 +203,7 @@ function FeaturesSection() {
 
         {/* Bento grid */}
         <motion.div {...staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map(({ icon: Icon, key, color, text }, idx) => (
+          {features.map(({ img, key, color }, idx) => (
             <motion.div
               key={key}
               {...staggerItem}
@@ -207,8 +217,8 @@ function FeaturesSection() {
                     </div>
                   )}
                   <CardContent className={`relative z-10 ${idx === 0 ? 'p-8' : 'p-6'}`}>
-                    <div className={`mb-4 flex ${idx === 0 ? 'h-14 w-14' : 'h-12 w-12'} items-center justify-center rounded-2xl bg-linear-to-br ${color} group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`${idx === 0 ? 'h-7 w-7' : 'h-6 w-6'} ${text}`} />
+                    <div className={`mb-4 flex ${idx === 0 ? 'h-16 w-16' : 'h-14 w-14'} items-center justify-center rounded-2xl bg-linear-to-br ${color} group-hover:scale-110 transition-transform duration-300`}>
+                      <img src={img} alt="" className={`${idx === 0 ? 'h-10 w-10' : 'h-9 w-9'} object-contain drop-shadow-sm`} />
                     </div>
                     <h3 className={`${idx === 0 ? 'text-xl' : 'text-lg'} font-semibold mb-2 line-clamp-1`}>
                       {t(`features.${key}.title`)}
@@ -346,14 +356,14 @@ function TestimonialsSection() {
   )
 }
 
+const PREVIEW_TIERS = [
+  { key: 'starter' as const, icon: Package, popular: false, variant: 'outline' as const },
+  { key: 'plus' as const, icon: Star, popular: true, variant: 'glow' as const },
+  { key: 'deluxe' as const, icon: Crown, popular: false, variant: 'default' as const },
+]
+
 function PricingPreviewSection() {
   const { t } = useTranslation()
-
-  const tiers = [
-    { key: 'starter', popular: false },
-    { key: 'plus', popular: true },
-    { key: 'deluxe', popular: false },
-  ]
 
   return (
     <section className="py-24 sm:py-32 relative">
@@ -363,56 +373,109 @@ function PricingPreviewSection() {
           subtitle={t('pricingPreview.sectionSubtitle')}
         />
 
-        <motion.div {...staggerContainer} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {tiers.map(({ key, popular }) => {
-            const features = t(`pricingPreview.${key}.features`, { returnObjects: true }) as string[]
+        <motion.div
+          {...staggerContainer}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch"
+        >
+          {PREVIEW_TIERS.map((tier) => {
+            const features = t(`pricingPreview.${tier.key}.features`, { returnObjects: true }) as string[]
+            const Icon = tier.icon
             return (
-              <motion.div key={key} {...staggerItem}>
+              <motion.div key={tier.key} {...staggerItem} className="h-full">
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  className={cn('h-full', tier.popular && 'md:-translate-y-4')}
                 >
                   <SpotlightCard
-                    spotlightColor={popular ? 'rgba(244, 63, 94, 0.15)' : 'rgba(255, 255, 255, 0.08)'}
-                    className={popular ? 'h-full' : 'h-full'}
+                    spotlightColor={tier.popular ? 'rgba(244, 63, 94, 0.15)' : 'rgba(255, 255, 255, 0.08)'}
+                    className="h-full"
                   >
-                  <Card
-                    variant={popular ? 'gradient-border' : 'glass'}
-                    className={`h-full flex flex-col relative ${popular ? 'scale-[1.03] glow-primary' : ''}`}
-                  >
-                    {popular && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <Badge className="px-4 py-1 shadow-lg shadow-primary/20 animate-pulse-soft">
-                          {t(`pricingPreview.${key}.badge`)}
-                        </Badge>
-                      </div>
-                    )}
-                    <CardContent className="p-6 flex flex-col flex-1">
-                      <h3 className="text-lg font-semibold">{t(`pricingPreview.${key}.name`)}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{t(`pricingPreview.${key}.description`)}</p>
-                      <div className="mt-4 mb-6">
-                        <span className={`text-4xl font-bold ${popular ? 'text-gradient' : ''}`}>
-                          {t(`pricingPreview.${key}.price`)}
-                        </span>
-                        <span className="text-sm text-muted-foreground ml-1">
-                          / {t(`pricingPreview.${key}.period`)}
-                        </span>
-                      </div>
-                      <ul className="space-y-3 mb-8 flex-1">
-                        {features.map((feature, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm">
-                            <Check className={`h-4 w-4 mt-0.5 shrink-0 ${popular ? 'text-primary' : 'text-muted-foreground'}`} />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Link to={ROUTES.BUILDER}>
-                        <Button variant={popular ? 'glow' : 'outline'} className="w-full">
-                          {t('pricingPreview.cta')}
+                    <Card
+                      variant={tier.popular ? 'gradient-border' : 'glass'}
+                      className={cn(
+                        'relative flex h-full flex-col overflow-hidden',
+                        tier.popular && 'glow-primary scale-[1.02]',
+                      )}
+                    >
+                      {/* Popular badge — top-right corner */}
+                      {tier.popular && (
+                        <div className="absolute right-4 top-4 z-10">
+                          <Badge className="gap-1 shadow-lg shadow-primary/20 animate-pulse-soft">
+                            <Zap className="size-3" />
+                            {t(`pricingPreview.${tier.key}.badge`)}
+                          </Badge>
+                        </div>
+                      )}
+
+                      <CardHeader className="pb-4 pt-8">
+                        {/* Tier icon */}
+                        <div
+                          className={cn(
+                            'mb-3 inline-flex size-11 items-center justify-center rounded-xl',
+                            tier.popular
+                              ? 'bg-linear-to-br from-primary/20 to-secondary/10 text-primary'
+                              : 'bg-muted text-muted-foreground',
+                          )}
+                        >
+                          <Icon className="size-5" />
+                        </div>
+                        <CardTitle className="text-xl">
+                          {t(`pricingPreview.${tier.key}.name`)}
+                        </CardTitle>
+                        <CardDescription>
+                          {t(`pricingPreview.${tier.key}.description`)}
+                        </CardDescription>
+                      </CardHeader>
+
+                      <CardContent className="flex-1 space-y-6">
+                        {/* Price */}
+                        <div>
+                          <span className={cn('font-serif text-4xl font-bold tracking-tight', tier.popular && 'text-gradient')}>
+                            {t(`pricingPreview.${tier.key}.price`)}
+                          </span>
+                          <span className="ml-1.5 text-sm text-muted-foreground">
+                            / {t(`pricingPreview.${tier.key}.period`)}
+                          </span>
+                        </div>
+
+                        <Separator />
+
+                        {/* Feature list */}
+                        <div className="space-y-3">
+                          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {t('pricing.features', 'What\'s included')}
+                          </p>
+                          <ul className="space-y-2.5">
+                            {features.map((feature, fi) => (
+                              <li key={fi} className="flex items-start gap-2.5 text-sm">
+                                <Check
+                                  className={cn(
+                                    'mt-0.5 size-4 shrink-0',
+                                    tier.popular ? 'text-primary' : 'text-muted-foreground',
+                                  )}
+                                />
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </CardContent>
+
+                      <CardFooter className="pt-4 pb-8">
+                        <Button
+                          asChild
+                          variant={tier.popular ? 'glow' : tier.variant}
+                          size="lg"
+                          className="w-full gap-2"
+                        >
+                          <Link to={ROUTES.BUILDER}>
+                            {t('pricingPreview.cta')}
+                            <ArrowRight className="size-4" />
+                          </Link>
                         </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
+                      </CardFooter>
+                    </Card>
                   </SpotlightCard>
                 </motion.div>
               </motion.div>
@@ -425,7 +488,7 @@ function PricingPreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-8"
+          className="text-center mt-12"
         >
           <Link to={ROUTES.PRICING}>
             <Button variant="link" className="group text-base">

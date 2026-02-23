@@ -103,11 +103,12 @@ function PricingCards() {
               whileInView="whileInView"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
+              className="h-full"
             >
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className={cn(tier.popular && 'md:-translate-y-4')}
+                className={cn('h-full', tier.popular && 'md:-translate-y-4')}
               >
                 <Card
                   variant={tier.popular ? 'gradient-border' : 'glass'}

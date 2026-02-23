@@ -41,6 +41,11 @@ import christmasIll from '@/assets/illustrations/christmas.png'
 import getWellIll from '@/assets/illustrations/get-well.png'
 import graduationIll from '@/assets/illustrations/graduation.png'
 import valentineIll from '@/assets/illustrations/valentine.png'
+import halloweenIll from '@/assets/illustrations/halloween.png'
+import thankYouIll from '@/assets/illustrations/thank-you.png'
+import weddingIll from '@/assets/illustrations/wedding.png'
+import housewarmingIll from '@/assets/illustrations/housewarming.png'
+import justBecauseIll from '@/assets/illustrations/just-because.png'
 
 const OCCASION_ILL: Record<string, string> = {
   birthday: birthdayIll,
@@ -50,6 +55,11 @@ const OCCASION_ILL: Record<string, string> = {
   graduation: graduationIll,
   newBaby: babyShotIll,
   getWell: getWellIll,
+  halloween: halloweenIll,
+  thankYou: thankYouIll,
+  wedding: weddingIll,
+  housewarming: housewarmingIll,
+  justBecause: justBecauseIll,
 }
 
 // ─── Constants ───────────────────────────────────────────────────────────────
@@ -1280,21 +1290,21 @@ export default function BuilderPage() {
 
         {/* ─── Step Content ─── */}
         <ClickSpark sparkColor="#f43f5e" sparkSize={8} sparkRadius={20} sparkCount={6} duration={500}>
-        <div className="flex-1 mx-auto max-w-5xl px-4 py-8 w-full">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={state.currentStep}
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={slideTransition}
-            >
-              <StepComponent />
-            </motion.div>
-          </AnimatePresence>
-        </div>
+          <div className="flex-1 mx-auto max-w-5xl px-4 py-8 w-full">
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={state.currentStep}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={slideTransition}
+              >
+                <StepComponent />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </ClickSpark>
 
         {/* ─── Bottom Navigation Bar ─── */}
