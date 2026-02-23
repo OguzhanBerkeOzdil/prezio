@@ -10,11 +10,12 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground shadow-md hover:bg-primary/90 hover:shadow-lg active:scale-[0.98]",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-        outline: "border border-input bg-background shadow-sm hover:bg-accent/10 hover:text-accent-foreground",
+        outline: "border border-input bg-background shadow-sm hover:bg-accent/10 hover:text-foreground",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent/10 hover:text-accent-foreground",
+        ghost: "hover:bg-accent/10 hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        shimmer: "bg-primary text-primary-foreground shadow-md hover:shadow-lg animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(110deg,var(--color-primary),45%,hsl(346,77%,70%),55%,var(--color-primary))]",
+        shimmer: "bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(110deg,var(--color-primary),45%,hsl(346,77%,70%),55%,var(--color-primary))]",
+        glow: "bg-primary text-primary-foreground shadow-[0_0_20px_rgba(225,29,72,0.4)] hover:shadow-[0_0_35px_rgba(225,29,72,0.6)] hover:scale-[1.02] active:scale-[0.98]",
       },
       size: {
         default: "h-10 px-5 py-2",

@@ -23,6 +23,8 @@
   "hero": {
     "badge": "Sevgiyle El Yapımı",
     "title": "Hikayenizi Anlatan Hediye Kutuları Yaratın",
+    "titleBase": "Hikayenizi Anlatan",
+    "titleHighlight": "Hediye Kutuları Yaratın",
     "subtitle": "Mükemmel ürünleri seçmekten kalbi dokunacak bir mesaj yazmaya kadar — stüdyomuz hediye vermeyi bir sanat formuna dönüştürüyor. Her kutu bir şaheser.",
     "cta": "Oluşturmaya Başla",
     "secondaryCta": "Kataloğa Göz At",
@@ -203,6 +205,34 @@
       "tech": "Teknoloji",
       "home": "Ev ve Dekorasyon"
     }
+  },
+  "catalogItems": {
+    "choc-truffle-box": { "name": "El Yapımı Trüf Koleksiyonu", "description": "Çeşitli lezzetlerde el yapımı Belçika trüfleri" },
+    "macaron-set": { "name": "Fransız Makaron Seti", "description": "Pastel renklerde 12 adet zarif Fransız makaronu" },
+    "honey-jar": { "name": "El Yapımı Bal Kavanozu", "description": "Dekoratif kavanozda küçük parti kır çiçeği balı" },
+    "cookie-tin": { "name": "Gurme Kurabiye Kutusu", "description": "Özel teneke kutuda çeşitli tereyağlı kurabiyeler" },
+    "soy-candle": { "name": "Lavanta Soya Mumu", "description": "Doğal lavanta özlü el dökümü soya mumu" },
+    "reed-diffuser": { "name": "Çubuklu Oda Kokusu Seti", "description": "Bitkisel esanslarla uzun süre kalıcı çubuklu oda kokusu" },
+    "essential-oils": { "name": "Üçlü Esansiyel Yağ Seti", "description": "Okaliptüs, lavanta ve nane saf esansiyel yağları" },
+    "silk-scarf": { "name": "İpek Eşarp", "description": "Botanik desenli lüks el baskısı ipek eşarp" },
+    "leather-keychain": { "name": "Deri Anahtarlık", "description": "El dikişi hakiki deri anahtarlık" },
+    "jewelry-box": { "name": "Kadife Mücevher Kutusu", "description": "Kadife astarlı şık mücevher düzenleyici" },
+    "bath-bomb-set": { "name": "Banyo Bombası Koleksiyonu", "description": "Meyveli kokularla 6 adet köpüren banyo bombası seti" },
+    "face-mask-set": { "name": "Lüks Yüz Maskesi Seti", "description": "Evde spa keyfi için premium yaprak maskeler" },
+    "hand-cream": { "name": "Botanik El Kremi", "description": "Shea yağı ve aloe vera içeren besleyici el kremi" },
+    "tea-collection": { "name": "Premium Çay Koleksiyonu", "description": "Dünyanın dört bir yanından özenle seçilmiş yaprak çaylar" },
+    "coffee-beans": { "name": "Tek Köken Kahve", "description": "Taze kavrulmuş tek köken kahve çekirdekleri" },
+    "hot-chocolate": { "name": "El Yapımı Sıcak Çikolata", "description": "Marshmallow ve baharatlı zengin kakao karışımı" },
+    "journal": { "name": "Deri Ciltli Defter", "description": "Kalın pamuk sayfalarla el yapımı deri defter" },
+    "pen-set": { "name": "Kaligrafi Kalem Seti", "description": "3 farklı uç boyutunda profesyonel kaligrafi seti" },
+    "bookmark-set": { "name": "El Yapımı Kitap Ayracı Seti", "description": "5 adet preslenmiş çiçekli reçine kitap ayracı seti" },
+    "wireless-charger": { "name": "Bambu Kablosuz Şarj Cihazı", "description": "Çevre dostu bambu Qi kablosuz şarj pedi" },
+    "bluetooth-speaker": { "name": "Mini Bluetooth Hoparlör", "description": "Zengin sesli taşınabilir su geçirmez hoparlör" },
+    "phone-stand": { "name": "Ahşap Telefon Standı", "description": "El yapımı ceviz ağacı telefon ve tablet standı" },
+    "succulent": { "name": "Mini Sukulent Saksı", "description": "El boyaması seramik saksıda sevimli sukulent" },
+    "coaster-set": { "name": "Mermer Bardak Altlığı Seti", "description": "Altın kenarlı 4 adet doğal mermer bardak altlığı seti" },
+    "photo-frame": { "name": "Minimalist Fotoğraf Çerçevesi", "description": "13x18 cm fotoğraflar için sade çizgili metal çerçeve" },
+    "throw-blanket": { "name": "Yumuşacık Koltuk Battaniyesi", "description": "Doğal tonlarda ultra yumuşak dokuma battaniye" }
   },
   "builder": {
     "title": "Hediye Kutusu Oluşturucu",

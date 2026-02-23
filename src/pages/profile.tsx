@@ -49,8 +49,8 @@ function EmptyState() {
       transition={{ duration: 0.5 }}
       className="flex flex-col items-center justify-center gap-6 py-24 text-center"
     >
-      <div className="rounded-full bg-muted p-6">
-        <Gift className="h-12 w-12 text-muted-foreground" />
+      <div className="rounded-full bg-linear-to-br from-primary/15 to-secondary/10 p-6 glass">
+        <Gift className="h-12 w-12 text-primary/60" />
       </div>
       <div className="space-y-2">
         <h3 className="text-xl font-semibold">{t('profile.noDesigns')}</h3>
@@ -92,7 +92,7 @@ function DesignCard({ design, index, onRename, onDelete, onDuplicate, onEdit }: 
       exit="exit"
       transition={{ duration: 0.35, delay: index * 0.06 }}
     >
-      <Card className="group relative flex h-full flex-col overflow-hidden transition-shadow hover:shadow-lg">
+      <Card variant="glass" className="group relative flex h-full flex-col overflow-hidden hover:shadow-lg hover:border-primary/20">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-2">
             <CardTitle className="line-clamp-1 text-lg">{design.name}</CardTitle>

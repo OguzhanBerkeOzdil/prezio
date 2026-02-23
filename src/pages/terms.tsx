@@ -4,7 +4,7 @@ import { SEO } from '@/components/common/seo'
 import { PageTransition } from '@/components/common/page-transition'
 import { Separator } from '@/components/ui/separator'
 import { FileText } from 'lucide-react'
-
+import { fadeInUp } from '@/lib/animations'
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function renderFormattedContent(content: string) {
@@ -20,14 +20,6 @@ function renderFormattedContent(content: string) {
   })
 }
 
-// ─── Animation variants ──────────────────────────────────────────────────────
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-50px' },
-  transition: { duration: 0.6, ease: 'easeOut' as const },
-}
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -40,8 +32,8 @@ export default function TermsPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden py-20 sm:py-28">
-        <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-secondary/5" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-primary)_0%,transparent_50%)] opacity-[0.07]" />
+        <div className="absolute inset-0 mesh-gradient" />
+        <div className="absolute inset-0 noise-bg" />
 
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -50,7 +42,7 @@ export default function TermsPage() {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center gap-4"
           >
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-secondary/10 glass">
               <FileText className="h-8 w-8 text-primary" />
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
@@ -65,9 +57,11 @@ export default function TermsPage() {
 
       {/* Content */}
       <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <motion.div {...fadeInUp} className="space-y-6">
-          {renderFormattedContent(t('legal.terms.content'))}
-        </motion.div>
+        <div className="glass rounded-2xl p-6 sm:p-10">
+          <motion.div {...fadeInUp} className="space-y-6">
+            {renderFormattedContent(t('legal.terms.content'))}
+          </motion.div>
+        </div>
       </section>
     </PageTransition>
   )

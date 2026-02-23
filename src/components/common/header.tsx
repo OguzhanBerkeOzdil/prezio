@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { Gift, Menu, X, Sun, Moon, Globe, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTheme } from '@/app/theme-provider'
@@ -48,9 +48,9 @@ function LanguageSwitcher({ variant = 'desktop' }: { variant?: 'desktop' | 'mobi
             aria-checked={i18n.language === lang.code}
             onClick={() => i18n.changeLanguage(lang.code)}
             className={cn(
-              'px-3 py-1.5 text-xs font-semibold rounded-md transition-colors',
+              'px-3 py-1.5 text-xs font-semibold rounded-md transition-all duration-200',
               i18n.language === lang.code
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-linear-to-br from-primary to-secondary text-primary-foreground shadow-sm'
                 : 'text-muted-foreground hover:bg-muted hover:text-foreground'
             )}
           >
@@ -83,7 +83,7 @@ function LanguageSwitcher({ variant = 'desktop' }: { variant?: 'desktop' | 'mobi
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 top-full mt-1 z-50 rounded-lg border border-border bg-background shadow-lg p-1 min-w-25"
+            className="absolute right-0 top-full mt-1 z-50 rounded-lg glass-strong shadow-lg p-1 min-w-25"
             role="listbox"
             aria-label={t('nav.language')}
           >
@@ -116,14 +116,27 @@ export function Header() {
   const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
+  const { scrollY } = useScroll()
+  const headerBlur = useTransform(scrollY, [0, 100], [20, 40])
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <motion.header
+      style={{
+        backdropFilter: useTransform(headerBlur, v => `blur(${v}px)`),
+        WebkitBackdropFilter: useTransform(headerBlur, v => `blur(${v}px)`),
+      }}
+      className="sticky top-0 z-50 w-full border-b border-white/10 dark:border-white/5 bg-background/60 dark:bg-background/40"
+    >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group" onClick={() => setMobileOpen(false)}>
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-transform group-hover:scale-110">
+          <motion.div
+            whileHover={{ rotate: -6, scale: 1.1 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-primary to-secondary text-primary-foreground shadow-md shadow-primary/20"
+          >
             <Gift className="h-5 w-5" />
-          </div>
+          </motion.div>
           <span className="font-serif text-xl font-bold tracking-tight">
             Prezio
           </span>
@@ -149,7 +162,7 @@ export function Header() {
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute bottom-0 left-1 right-1 h-0.5 bg-primary rounded-full"
+                    className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-linear-to-r from-primary to-secondary"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -190,7 +203,7 @@ export function Header() {
           </Button>
 
           <Link to={ROUTES.BUILDER} className="hidden sm:block">
-            <Button variant="shimmer" size="sm">
+            <Button variant="glow" size="sm">
               {t('hero.cta')}
             </Button>
           </Link>
@@ -216,7 +229,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-border/50 bg-background overflow-hidden"
+            className="lg:hidden border-t border-white/10 glass overflow-hidden"
           >
             <nav className="flex flex-col p-4 gap-1">
               {navLinks.map(link => {
@@ -246,13 +259,13 @@ export function Header() {
               </Link>
 
               {/* Mobile language switcher */}
-              <div className="border-t border-border/50 mt-2 pt-3">
+              <div className="border-t border-white/10 mt-2 pt-3">
                 <LanguageSwitcher variant="mobile" />
               </div>
 
               <div className="pt-2">
                 <Link to={ROUTES.BUILDER} onClick={() => setMobileOpen(false)}>
-                  <Button variant="shimmer" className="w-full">
+                  <Button variant="glow" className="w-full">
                     {t('hero.cta')}
                   </Button>
                 </Link>
@@ -261,6 +274,6 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   )
 }

@@ -23,6 +23,8 @@
   "hero": {
     "badge": "Handcrafted with Love",
     "title": "Create Gift Boxes That Tell Your Story",
+    "titleBase": "Create Gift Boxes That",
+    "titleHighlight": "Tell Your Story",
     "subtitle": "From selecting the perfect items to crafting a heartfelt message, our studio makes gift-giving an art form. Every box is a masterpiece.",
     "cta": "Start Building",
     "secondaryCta": "Browse Catalog",
@@ -203,6 +205,34 @@
       "tech": "Tech & Gadgets",
       "home": "Home & Decor"
     }
+  },
+  "catalogItems": {
+    "choc-truffle-box": { "name": "Artisan Truffle Collection", "description": "Handcrafted Belgian truffles in assorted flavors" },
+    "macaron-set": { "name": "French Macaron Set", "description": "12 delicate French macarons in pastel colors" },
+    "honey-jar": { "name": "Artisan Honey Jar", "description": "Small-batch wildflower honey in a decorative jar" },
+    "cookie-tin": { "name": "Gourmet Cookie Tin", "description": "Assorted butter cookies in a keepsake tin" },
+    "soy-candle": { "name": "Lavender Soy Candle", "description": "Hand-poured soy candle with natural lavender essence" },
+    "reed-diffuser": { "name": "Reed Diffuser Set", "description": "Long-lasting reed diffuser with botanical scents" },
+    "essential-oils": { "name": "Essential Oil Trio", "description": "Eucalyptus, lavender, and peppermint pure oils" },
+    "silk-scarf": { "name": "Silk Scarf", "description": "Luxurious hand-printed silk scarf with botanical motifs" },
+    "leather-keychain": { "name": "Leather Keychain", "description": "Hand-stitched genuine leather keychain" },
+    "jewelry-box": { "name": "Velvet Jewelry Box", "description": "Compact velvet-lined jewelry organizer" },
+    "bath-bomb-set": { "name": "Bath Bomb Collection", "description": "Set of 6 fizzy bath bombs in fruity scents" },
+    "face-mask-set": { "name": "Luxury Face Mask Set", "description": "Premium sheet masks for a spa day at home" },
+    "hand-cream": { "name": "Botanical Hand Cream", "description": "Nourishing hand cream with shea butter and aloe" },
+    "tea-collection": { "name": "Premium Tea Collection", "description": "Curated selection of loose-leaf teas from around the world" },
+    "coffee-beans": { "name": "Single-Origin Coffee", "description": "Freshly roasted single-origin coffee beans" },
+    "hot-chocolate": { "name": "Artisan Hot Chocolate", "description": "Rich cocoa mix with marshmallows and spices" },
+    "journal": { "name": "Leather-Bound Journal", "description": "Handmade leather journal with thick cotton pages" },
+    "pen-set": { "name": "Calligraphy Pen Set", "description": "Professional calligraphy set with 3 nib sizes" },
+    "bookmark-set": { "name": "Handmade Bookmark Set", "description": "Set of 5 pressed-flower resin bookmarks" },
+    "wireless-charger": { "name": "Bamboo Wireless Charger", "description": "Eco-friendly bamboo Qi wireless charging pad" },
+    "bluetooth-speaker": { "name": "Mini Bluetooth Speaker", "description": "Portable waterproof speaker with rich sound" },
+    "phone-stand": { "name": "Wooden Phone Stand", "description": "Handcrafted walnut wood phone and tablet stand" },
+    "succulent": { "name": "Mini Succulent Pot", "description": "Cute succulent in a handpainted ceramic pot" },
+    "coaster-set": { "name": "Marble Coaster Set", "description": "Set of 4 natural marble coasters with gold edges" },
+    "photo-frame": { "name": "Minimalist Photo Frame", "description": "Clean-lined metal frame for 5x7 photos" },
+    "throw-blanket": { "name": "Cozy Throw Blanket", "description": "Ultra-soft woven throw in neutral tones" }
   },
   "builder": {
     "title": "Gift Box Builder",

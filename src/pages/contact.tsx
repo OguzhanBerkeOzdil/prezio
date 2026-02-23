@@ -16,26 +16,8 @@ import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import { SEO } from '@/components/common/seo'
 import { PageTransition } from '@/components/common/page-transition'
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-50px' },
-  transition: { duration: 0.6, ease: 'easeOut' as const },
-}
-
-const staggerContainer = {
-  initial: {},
-  whileInView: { transition: { staggerChildren: 0.15 } },
-  viewport: { once: true },
-}
-
-const staggerItem = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 },
-}
+import { GradientOrb } from '@/components/common/gradient-orb'
+import { fadeInUp, staggerContainer, staggerItem } from '@/lib/animations'
 
 type ContactFormData = {
   name: string
@@ -55,8 +37,11 @@ function HeroSection() {
   const { t } = useTranslation()
   return (
     <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
-      <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-secondary/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-primary)_0%,transparent_50%)] opacity-[0.07]" />
+      <div className="absolute inset-0 mesh-gradient" />
+      <div className="absolute inset-0 noise-bg" />
+      <GradientOrb color="primary" size="lg" className="absolute -top-20 -right-10 opacity-25" />
+      <GradientOrb color="secondary" size="md" className="absolute -bottom-10 -left-10 opacity-20" />
+
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -64,11 +49,11 @@ function HeroSection() {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center gap-4"
         >
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-secondary/10 glass glow-primary">
             <Mail className="h-8 w-8 text-primary" />
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            {t('contact.title')}
+            <span className="text-gradient">{t('contact.title')}</span>
           </h1>
           <p className="mt-2 max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
             {t('contact.subtitle')}
@@ -123,14 +108,15 @@ function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <Card>
+      <Card variant="glass">
         <CardContent className="flex flex-col items-center justify-center gap-4 py-16">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+            className="flex h-20 w-20 items-center justify-center rounded-full bg-linear-to-br from-green-500/20 to-emerald-500/10"
           >
-            <CheckCircle className="h-16 w-16 text-green-500" />
+            <CheckCircle className="h-10 w-10 text-green-500" />
           </motion.div>
           <p className="text-xl font-semibold text-center">{t('contact.form.success')}</p>
           <Button variant="default" className="mt-2" onClick={() => setIsSubmitted(false)}>
@@ -143,7 +129,8 @@ function ContactForm() {
 
   return (
     <motion.div {...fadeInUp}>
-      <Card>
+      <Card variant="glass" className="relative overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-primary via-secondary to-accent" />
         <CardHeader>
           <CardTitle>{t('contact.title')}</CardTitle>
           <CardDescription>{t('contact.subtitle')}</CardDescription>
@@ -151,7 +138,6 @@ function ContactForm() {
         <Separator className="mb-6" />
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-            {/* Name */}
             <div className="space-y-2">
               <Label htmlFor="name">{t('contact.form.name')}</Label>
               <Input
@@ -167,7 +153,6 @@ function ContactForm() {
               )}
             </div>
 
-            {/* Email */}
             <div className="space-y-2">
               <Label htmlFor="email">{t('contact.form.email')}</Label>
               <Input
@@ -184,7 +169,6 @@ function ContactForm() {
               )}
             </div>
 
-            {/* Subject */}
             <div className="space-y-2">
               <Label htmlFor="subject">{t('contact.form.subject')}</Label>
               <Input
@@ -200,7 +184,6 @@ function ContactForm() {
               )}
             </div>
 
-            {/* Message */}
             <div className="space-y-2">
               <Label htmlFor="message">{t('contact.form.message')}</Label>
               <Textarea
@@ -223,7 +206,7 @@ function ContactForm() {
 
             <Button
               type="submit"
-              variant="shimmer"
+              variant="glow"
               size="lg"
               className="w-full"
               disabled={isSubmitting}
@@ -254,21 +237,23 @@ function ContactInfo() {
     <motion.div {...staggerContainer} className="space-y-4">
       {infoCards.map(({ icon: Icon, key }) => (
         <motion.div key={key} {...staggerItem}>
-          <Card className="transition-shadow hover:shadow-lg">
-            <CardContent className="flex items-start gap-4 p-5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                <Icon className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium leading-none mb-1">
-                  {t(`contact.info.${key}`)}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {t(`contact.info.${key}Value` as string)}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <motion.div whileHover={{ y: -2, scale: 1.01 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
+            <Card variant="glass" className="hover:border-primary/20">
+              <CardContent className="flex items-start gap-4 p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-primary/20 to-secondary/10">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium leading-none mb-1">
+                    {t(`contact.info.${key}`)}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {t(`contact.info.${key}Value` as string)}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </motion.div>
       ))}
     </motion.div>
@@ -285,7 +270,7 @@ export default function ContactPage() {
       <HeroSection />
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="grid gap-10 lg:grid-cols-[1fr_380px]">
+        <div className="grid gap-10 md:grid-cols-[1fr_320px] lg:grid-cols-[1fr_380px]">
           <ContactForm />
           <ContactInfo />
         </div>

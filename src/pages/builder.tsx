@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, lazy, Suspense } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -18,7 +18,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Separator } from '@/components/ui/separator'
-import { Progress } from '@/components/ui/progress'
+
 import { Slider } from '@/components/ui/slider'
 import { Switch } from '@/components/ui/switch'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -28,6 +28,29 @@ import { useBuilderStore, TOTAL_STEPS } from '@/features/builder/builder-store'
 import { catalogItems } from '@/data/catalog-items'
 import { PRICE_CONFIG, ROUTES } from '@/lib/constants'
 import { cn, formatPrice } from '@/lib/utils'
+import ClickSpark from '@/components/reactbits/click-spark'
+import confettiData from '@/assets/lottie/confetti.json'
+
+const Lottie = lazy(() => import('lottie-react'))
+
+// ─── Occasion Illustrations ─────────────────────────────────────────────────
+import anniversaryIll from '@/assets/illustrations/anniversary.png'
+import babyShotIll from '@/assets/illustrations/baby-shower.png'
+import birthdayIll from '@/assets/illustrations/birthday.png'
+import christmasIll from '@/assets/illustrations/christmas.png'
+import getWellIll from '@/assets/illustrations/get-well.png'
+import graduationIll from '@/assets/illustrations/graduation.png'
+import valentineIll from '@/assets/illustrations/valentine.png'
+
+const OCCASION_ILL: Record<string, string> = {
+  birthday: birthdayIll,
+  anniversary: anniversaryIll,
+  valentine: valentineIll,
+  christmas: christmasIll,
+  graduation: graduationIll,
+  newBaby: babyShotIll,
+  getWell: getWellIll,
+}
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -103,43 +126,14 @@ const staggerItem = {
   transition: { duration: 0.3 },
 }
 
-// ─── Confetti Component ──────────────────────────────────────────────────────
-
-const CONFETTI_COLORS = ['#f43f5e', '#0ea5e9', '#22c55e', '#f97316', '#8b5cf6', '#f9a8d4']
-
-function generateConfettiPieces() {
-  return Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    delay: Math.random() * 2,
-    duration: 2 + Math.random() * 2,
-    size: 6 + Math.random() * 8,
-    color: CONFETTI_COLORS[Math.floor(Math.random() * 6)],
-    rotation: Math.random() * 360,
-    isCircle: Math.random() > 0.5,
-  }))
-}
+// ─── Confetti Component (Lottie) ─────────────────────────────────────────────
 
 function Confetti() {
-  const [pieces] = useState(() => generateConfettiPieces())
-
   return (
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
-      {pieces.map((p) => (
-        <motion.div
-          key={p.id}
-          initial={{ y: -20, x: `${p.x}vw`, opacity: 1, rotate: 0, scale: 1 }}
-          animate={{ y: '110vh', opacity: 0, rotate: p.rotation + 720, scale: 0.5 }}
-          transition={{ duration: p.duration, delay: p.delay, ease: 'easeIn' as const }}
-          style={{
-            position: 'absolute',
-            width: p.size,
-            height: p.size,
-            borderRadius: p.isCircle ? '50%' : '2px',
-            backgroundColor: p.color,
-          }}
-        />
-      ))}
+      <Suspense fallback={null}>
+        <Lottie animationData={confettiData} loop={false} autoplay className="w-full h-full" />
+      </Suspense>
     </div>
   )
 }
@@ -166,19 +160,24 @@ function OccasionStep() {
         {OCCASION_KEYS.map((key) => (
           <motion.div key={key} variants={staggerItem}>
             <Card
+              variant="glass"
               className={cn(
                 'cursor-pointer transition-all duration-200 hover:scale-[1.03] hover:shadow-lg',
                 state.occasion === key
-                  ? 'ring-2 ring-primary border-primary bg-primary/5'
-                  : 'hover:border-primary/40'
+                  ? 'ring-2 ring-primary/50 border-primary/30 shadow-[0_0_15px_rgba(225,29,72,0.15)]'
+                  : 'hover:border-primary/30'
               )}
               onClick={() => setState({ occasion: key })}
             >
-              <CardContent className="p-4 text-center space-y-2">
+              <CardContent className="p-4 text-center space-y-2 flex flex-col items-center justify-center min-h-28">
                 <span className="flex justify-center text-primary" role="img" aria-label={key}>
-                  {(() => { const OccIcon = OCCASION_ICONS[key]; return <OccIcon className="h-8 w-8" /> })()}
+                  {OCCASION_ILL[key] ? (
+                    <img src={OCCASION_ILL[key]} alt="" width={48} height={48} className="object-contain drop-shadow-sm" />
+                  ) : (
+                    (() => { const OccIcon = OCCASION_ICONS[key]; return <OccIcon className="h-8 w-8" /> })()
+                  )}
                 </span>
-                <p className="text-sm font-medium leading-tight">
+                <p className="text-sm font-medium leading-tight line-clamp-2">
                   {t(`builder.steps.occasion.options.${key}`)}
                 </p>
                 {state.occasion === key && (
@@ -598,12 +597,13 @@ function ItemsStep() {
     return catalogItems.filter((item) => {
       const matchesSearch =
         !search ||
+        t(item.nameKey).toLowerCase().includes(search.toLowerCase()) ||
         item.name.toLowerCase().includes(search.toLowerCase()) ||
         item.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase()))
       const matchesCategory = category === 'all' || item.category === category
       return matchesSearch && matchesCategory
     })
-  }, [search, category])
+  }, [search, category, t])
 
   const isSelected = useCallback(
     (id: string) => state.selectedItems.some((i) => i.id === id),
@@ -687,10 +687,10 @@ function ItemsStep() {
                 )}
               >
                 <CardContent className="p-4 flex items-center gap-3">
-                  <ItemIcon name={item.icon} className="h-7 w-7 text-primary shrink-0" />
+                  <ItemIcon name={item.icon} itemId={item.id} imgSize={36} className="h-7 w-7 text-primary shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-sm truncate">{item.name}</p>
-                    <p className="text-xs text-muted-foreground truncate">{item.description}</p>
+                    <p className="font-medium text-sm truncate">{t(item.nameKey)}</p>
+                    <p className="text-xs text-muted-foreground truncate">{t(item.descriptionKey)}</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-sm font-semibold text-primary">{formatPrice(item.price)}</span>
                       {item.popular && <Badge variant="accent" className="text-[10px] py-0"><Sparkles className="h-3 w-3" /></Badge>}
@@ -704,7 +704,7 @@ function ItemsStep() {
                         variant="destructive"
                         className="h-8 w-8"
                         onClick={() => removeItem(item.id)}
-                        aria-label={t('builder.steps.items.remove', 'Remove') + ': ' + item.name}
+                        aria-label={t('builder.steps.items.remove', 'Remove') + ': ' + t(item.nameKey)}
                       >
                         <Minus className="h-4 w-4" />
                       </Button>
@@ -715,7 +715,7 @@ function ItemsStep() {
                         className="h-8 w-8"
                         disabled={boxFull}
                         onClick={() => addItem(item)}
-                        aria-label={t('builder.steps.items.add', 'Add') + ': ' + item.name}
+                        aria-label={t('builder.steps.items.add', 'Add') + ': ' + t(item.nameKey)}
                       >
                         <Plus className="h-4 w-4" />
                       </Button>
@@ -880,7 +880,7 @@ function PreviewStep() {
       label: t('builder.steps.preview.items'),
       value:
         state.selectedItems.length > 0
-          ? state.selectedItems.map((i) => i.name).join(', ')
+          ? state.selectedItems.map((i) => t(i.nameKey)).join(', ')
           : '—',
     },
     {
@@ -927,7 +927,7 @@ function PreviewStep() {
       <div className="text-center pt-4">
         <Separator className="mb-4" />
         <p className="text-muted-foreground text-sm">{t('builder.pricing.total')}</p>
-        <p className="text-3xl font-bold font-serif text-primary">{formatPrice(getTotalPrice())}</p>
+        <p className="text-3xl font-bold font-serif text-gradient">{formatPrice(getTotalPrice())}</p>
       </div>
     </div>
   )
@@ -1008,7 +1008,7 @@ function CheckoutStep() {
         <p className="text-muted-foreground">{t('builder.steps.checkout.description')}</p>
       </div>
 
-      <Card className="max-w-xl mx-auto">
+      <Card variant="glass" className="max-w-xl mx-auto">
         <CardContent className="p-6 space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -1084,7 +1084,7 @@ function CheckoutStep() {
       </Card>
 
       {/* Price Summary */}
-      <Card className="max-w-xl mx-auto">
+      <Card variant="glass" className="max-w-xl mx-auto">
         <CardContent className="p-6 space-y-3">
           <div className="flex justify-between text-sm">
             <span className="text-muted-foreground">{t('builder.pricing.baseBox')}</span>
@@ -1109,7 +1109,7 @@ function CheckoutStep() {
           <Separator />
           <div className="flex justify-between font-bold text-lg">
             <span>{t('builder.pricing.total')}</span>
-            <span className="text-primary">{formatPrice(getTotalPrice())}</span>
+            <span className="text-gradient">{formatPrice(getTotalPrice())}</span>
           </div>
         </CardContent>
       </Card>
@@ -1117,7 +1117,7 @@ function CheckoutStep() {
       <div className="text-center space-y-3">
         <p className="text-xs text-muted-foreground">{t('builder.steps.checkout.demoNotice')}</p>
         <Button
-          variant="shimmer"
+          variant="glow"
           size="lg"
           disabled={!isFormValid}
           onClick={handlePlaceOrder}
@@ -1186,7 +1186,7 @@ export default function BuilderPage() {
 
       <div className="min-h-screen flex flex-col">
         {/* ─── Top Bar: Progress + Step Indicators ─── */}
-        <div className="sticky top-0 z-40 bg-background/80 backdrop-blur-lg border-b border-border">
+        <div className="sticky top-16 z-40 glass-strong border-b border-white/10">
           <div className="mx-auto max-w-5xl px-4 py-3 space-y-3">
             {/* Title + Actions */}
             <div className="flex items-center justify-between">
@@ -1216,10 +1216,25 @@ export default function BuilderPage() {
             </div>
 
             {/* Progress bar */}
-            <Progress value={progress} className="h-1.5" />
+            <div className="relative h-2 rounded-full bg-muted overflow-hidden">
+              <motion.div
+                className="absolute inset-y-0 left-0 rounded-full bg-linear-to-r from-primary via-secondary to-accent"
+                initial={false}
+                animate={{ width: `${progress}%` }}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+              />
+            </div>
 
-            {/* Step indicators */}
-            <div className="flex items-center justify-between overflow-x-auto gap-1 pb-1 scrollbar-hide">
+            {/* Step indicators — compact on mobile, full on larger screens */}
+            <div className="flex sm:hidden items-center justify-center gap-2 py-1">
+              <span className="text-xs font-medium text-muted-foreground">
+                {t(`builder.steps.${stepKeys[state.currentStep]}.title`)}
+              </span>
+              <Badge variant="outline" className="text-xs px-2 py-0">
+                {state.currentStep + 1}/{stepKeys.length}
+              </Badge>
+            </div>
+            <div className="hidden sm:flex items-center justify-between overflow-x-auto gap-1 pb-1 scrollbar-hide">
               {stepKeys.map((key, idx) => {
                 const Icon = STEP_ICONS[idx]
                 const isActive = state.currentStep === idx
@@ -1229,7 +1244,7 @@ export default function BuilderPage() {
                     key={key}
                     onClick={() => handleSetStep(idx)}
                     className={cn(
-                      'flex flex-col items-center gap-0.5 min-w-14 py-1 px-1 rounded-lg transition-all duration-200 group',
+                      'flex flex-col items-center gap-0.5 min-w-18 py-1 px-1 rounded-lg transition-all duration-200 group',
                       isActive && 'bg-primary/10',
                       !isActive && 'hover:bg-muted'
                     )}
@@ -1237,7 +1252,7 @@ export default function BuilderPage() {
                     <div
                       className={cn(
                         'w-7 h-7 rounded-full flex items-center justify-center transition-all duration-200',
-                        isActive && 'bg-primary text-primary-foreground shadow-md',
+                        isActive && 'bg-linear-to-br from-primary to-secondary text-primary-foreground shadow-lg shadow-primary/30',
                         isCompleted && !isActive && 'bg-primary/20 text-primary',
                         !isActive && !isCompleted && 'bg-muted text-muted-foreground group-hover:bg-muted-foreground/20'
                       )}
@@ -1250,7 +1265,7 @@ export default function BuilderPage() {
                     </div>
                     <span
                       className={cn(
-                        'text-[10px] leading-tight text-center transition-colors',
+                        'text-xs leading-tight text-center transition-colors max-w-18 truncate',
                         isActive ? 'font-semibold text-primary' : 'text-muted-foreground'
                       )}
                     >
@@ -1264,6 +1279,7 @@ export default function BuilderPage() {
         </div>
 
         {/* ─── Step Content ─── */}
+        <ClickSpark sparkColor="#f43f5e" sparkSize={8} sparkRadius={20} sparkCount={6} duration={500}>
         <div className="flex-1 mx-auto max-w-5xl px-4 py-8 w-full">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -1279,10 +1295,11 @@ export default function BuilderPage() {
             </motion.div>
           </AnimatePresence>
         </div>
+        </ClickSpark>
 
         {/* ─── Bottom Navigation Bar ─── */}
         {!state.orderPlaced && (
-          <div className="sticky bottom-0 z-40 bg-background/80 backdrop-blur-lg border-t border-border">
+          <div className="sticky bottom-0 z-40 glass-strong border-t border-white/10">
             <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between gap-4">
               {/* Previous */}
               <Button
@@ -1302,7 +1319,7 @@ export default function BuilderPage() {
                   key={getTotalPrice()}
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="text-lg font-bold text-primary"
+                  className="text-lg font-bold text-gradient"
                 >
                   {formatPrice(getTotalPrice())}
                 </motion.p>

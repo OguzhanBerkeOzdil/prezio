@@ -23,6 +23,8 @@
   "hero": {
     "badge": "Ręcznie tworzone z miłością",
     "title": "Twórz zestawy prezentowe, które opowiadają Twoją historię",
+    "titleBase": "Twórz zestawy prezentowe, które opowiadają",
+    "titleHighlight": "Twoją historię",
     "subtitle": "Od wyboru idealnych produktów po stworzenie serdecznego przesłania — nasze studio zamienia dawanie prezentów w sztukę. Każdy zestaw to małe arcydzieło.",
     "cta": "Zacznij tworzyć",
     "secondaryCta": "Przeglądaj katalog",
@@ -205,6 +207,34 @@
       "tech": "Technologia i gadżety",
       "home": "Dom i dekoracje"
     }
+  },
+  "catalogItems": {
+    "choc-truffle-box": { "name": "Kolekcja Rzemieślniczych Trufli", "description": "Ręcznie robione belgijskie trufle w różnych smakach" },
+    "macaron-set": { "name": "Zestaw Francuskich Makaroników", "description": "12 delikatnych francuskich makaroników w pastelowych kolorach" },
+    "honey-jar": { "name": "Rzemieślniczy Słoik Miodu", "description": "Miód z polnych kwiatów w ozdobnym słoiku, produkowany małoseryjnie" },
+    "cookie-tin": { "name": "Puszka Ciasteczek Gurme", "description": "Asortyment maślanych ciasteczek w ozdobnej puszce" },
+    "soy-candle": { "name": "Lawendowa Świeca Sojowa", "description": "Ręcznie lana świeca sojowa z naturalną esencją lawendy" },
+    "reed-diffuser": { "name": "Zestaw Dyfuzora Zapachowego", "description": "Długotrwały dyfuzor z patyczkami o botanicznych aromatach" },
+    "essential-oils": { "name": "Trio Olejków Eterycznych", "description": "Czyste olejki eteryczne: eukaliptus, lawenda i mięta pieprzowa" },
+    "silk-scarf": { "name": "Jedwabna Apaszka", "description": "Luksusowa jedwabna apaszka z ręcznie drukowanymi motywami roślinnymi" },
+    "leather-keychain": { "name": "Skórzany Brelok", "description": "Ręcznie szyty brelok z naturalnej skóry" },
+    "jewelry-box": { "name": "Aksamitna Szkatułka na Biżuterię", "description": "Kompaktowy organizer na biżuterię wyłożony aksamitem" },
+    "bath-bomb-set": { "name": "Kolekcja Kul Kąpielowych", "description": "Zestaw 6 musujących kul kąpielowych o owocowych zapachach" },
+    "face-mask-set": { "name": "Luksusowy Zestaw Maseczek do Twarzy", "description": "Maseczki w płachcie premium na domowy dzień spa" },
+    "hand-cream": { "name": "Botaniczny Krem do Rąk", "description": "Odżywczy krem do rąk z masłem shea i aloesem" },
+    "tea-collection": { "name": "Kolekcja Herbat Premium", "description": "Starannie wyselekcjonowane herbaty liściaste z całego świata" },
+    "coffee-beans": { "name": "Kawa Single Origin", "description": "Świeżo palona kawa ziarnista z jednego pochodzenia" },
+    "hot-chocolate": { "name": "Rzemieślnicza Gorąca Czekolada", "description": "Bogata mieszanka kakao z piankami marshmallow i przyprawami" },
+    "journal": { "name": "Notes w Skórzanej Oprawie", "description": "Ręcznie robiony skórzany notes z grubymi bawełnianymi kartkami" },
+    "pen-set": { "name": "Zestaw do Kaligrafii", "description": "Profesjonalny zestaw do kaligrafii z 3 rozmiarami stalówek" },
+    "bookmark-set": { "name": "Zestaw Ręcznie Robionych Zakładek", "description": "Zestaw 5 zakładek z żywicy z prasowanymi kwiatami" },
+    "wireless-charger": { "name": "Bambusowa Ładowarka Bezprzewodowa", "description": "Ekologiczna bambusowa ładowarka bezprzewodowa Qi" },
+    "bluetooth-speaker": { "name": "Mini Głośnik Bluetooth", "description": "Przenośny wodoodporny głośnik z bogatym dźwiękiem" },
+    "phone-stand": { "name": "Drewniany Stojak na Telefon", "description": "Ręcznie wykonany stojak na telefon i tablet z drewna orzechowego" },
+    "succulent": { "name": "Mini Sukulent w Doniczce", "description": "Uroczy sukulent w ręcznie malowanej ceramicznej doniczce" },
+    "coaster-set": { "name": "Zestaw Marmurowych Podkładek", "description": "Zestaw 4 podkładek z naturalnego marmuru ze złotymi krawędziami" },
+    "photo-frame": { "name": "Minimalistyczna Ramka na Zdjęcia", "description": "Metalowa ramka o prostych liniach na zdjęcia 13x18 cm" },
+    "throw-blanket": { "name": "Przytulny Koc Dekoracyjny", "description": "Ultramiękki tkany koc w neutralnych odcieniach" }
   },
   "builder": {
     "title": "Kreator zestawów prezentowych",
